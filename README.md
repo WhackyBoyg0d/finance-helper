@@ -1,15 +1,15 @@
 # Pages Structure
-    >Home Page (login if no user, if user show clickable buttons to navigate website)
+    > Home Page (login if no user, if user show clickable buttons to navigate website)
 
-        >Profile (with streaks and avatar)
+        > Profile (with streaks and avatar)
 
-        >Course (progress up a building as levels)
+        > Course (progress up a building as levels)
 
-            >Actual slides
+            > Actual slides
 
-            >Questions
+            > Questions
 
-        >Mockup stock viewer?
+        > Mockup stock viewer?
 
 # Getting Started with Create React App
 
