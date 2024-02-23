@@ -1,8 +1,12 @@
 # Pages Structure
 Home Page (login if no user, if user show clickable buttons to navigate website)
+
     >Profile (with streaks and avatar)
+
     >Course (progress up a building as levels)
+
         >Actual slides
+        
         >Questions
 
 # Getting Started with Create React App
