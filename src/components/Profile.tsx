@@ -20,7 +20,7 @@ export function Profile(): JSX.Element {
       // <CssVarsProvider theme={theme}>
       <>
         <div className="flex justify-between px-12 py-12">
-          <h1 className="border-b-2 border-black inline-flex">Profile</h1>
+          <h1 className="border-b-2 border-black inline-flex">{sessionStorage.getItem('username')}</h1>
           <p className="border-b-2 border-black inline-flex">IMG</p>
         </div>
         <div className="flex-row mx-16 my-6 grid grid-cols-2 gap-8"> 

@@ -31,7 +31,8 @@ export function Login(): JSX.Element {
 
     if (user) {
 		
-		navigate("/");
+		navigate("/profile");
+    sessionStorage.setItem("username", user.username);
       console.log("Authentication successful");
     } else {
       // Authentication failed, display an error message or take appropriate action
