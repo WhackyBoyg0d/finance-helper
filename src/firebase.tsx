@@ -2,7 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
-
+import { getDatabase } from 'firebase/database'; 
 const firebaseConfig = {
   apiKey: "AIzaSyDTk8byuONUFYUBD3JHwmAnfBrLmjakv6Y",
   authDomain: "financeapp-285fe.firebaseapp.com",
@@ -16,5 +16,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const firestore = getFirestore(app);
+const database = getDatabase(app);
 
-export { auth, firestore, signInWithEmailAndPassword };
+export { auth, firestore, database };
