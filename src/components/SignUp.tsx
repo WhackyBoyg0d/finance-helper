@@ -37,7 +37,7 @@ const SignUp: React.FC = () => {
       window.alert('Successfully registered');
       
       // Use the navigate function to redirect to the login page
-      navigate('/login');
+      navigate('/Profile');
     } catch (error) {
       const errorMessage = error;
       window.alert(errorMessage);
