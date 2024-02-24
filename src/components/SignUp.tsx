@@ -5,6 +5,11 @@ import { ref, set } from 'firebase/database';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { UserData } from '../userInterface'; 
 import { useNavigate } from 'react-router-dom';
+import finwise from '../assets/finwise.png';
+// import { FaGoogle } from "react-icons/fa";
+// import {FaTwitter} from "react-icons/fa";
+// import {FaFacebook} from "react-icons/fa";
+// import {FaReddit} from "react-icons/fa";
 
 const SignUp: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -43,31 +48,43 @@ const SignUp: React.FC = () => {
 
   return (
     <div>
-      <h2>Sign Up</h2>
-      <form onSubmit={onSubmit}>
-        <label>Username:</label>
-        <input
+      <div className="flex justify-center items-center min-h-screen bg-primary">
+            <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md">
+                <img src={finwise} alt="Logo" className="mb-4 w-20 h-20" /> 
+				<p className="text-gray-600 font-extrabold">Sign Up</p>
+                <div className="flex justify-center items-center">
+					{/* <FaGoogle className="text-black-500 text-2xl m-2 " />
+					<FaTwitter className="text-black-500 text-2xl m-2 " />
+					<FaFacebook className="text-black-500 text-2xl m-2" />
+					<FaReddit className="text-black-500 text-2xl m-2" /> */}
+                </div>
+                <form onSubmit={onSubmit}>
+                <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter your username"
-        />
-        <label>Email:</label>
-        <input
-          type="email"
+          className="border-2 border-gray-300 p-2 m-2 w-full" 
+          />
+          <input
+          type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-        />
-        <label>Password:</label>
-        <input
+          className="border-2 border-gray-300 p-2 m-2 w-full" 
+          />
+          <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter your password"
+          className="border-2 border-gray-300 p-2 m-2 w-full" 
         />
-        <button type="submit">Sign Up</button>
-      </form>
+        <button type="submit" className="bg-blue-500 text-white p-2 m-2 w-full">Sign Up</button>
+
+                </form>
+            </div>
+        </div>
     </div>
   );
 };
