@@ -11,6 +11,7 @@ export function Index(): JSX.Element {
             <h1>Course Selector</h1>
             <ul>
                 {courses.map((course) => {
+                    console.log(course);
                     return (
                         <li><Link to={course.name}>Course on: {course.name}</Link></li>
                     )
