@@ -1,8 +1,33 @@
 [
     {
-        "name": "Introduction"
-    },
-    {
-        "name": "Stocks"
+        "name": "Introduction",
+        "slides": [
+            {
+                "title": "Welcome to Finwise",
+                "body": [
+                    "Hi, we would like to welcome you to Finwise",
+                    "We are a financial planner aimed to improve financial literacy in our users"
+                ],
+                "image_source": "data/images/courses/welcome.jpg"
+            },
+            {
+                "title": "Getting started",
+                "body": [
+                    "This is your first course",
+                    "We have many more courses like these aimed to help users like you"
+                ],
+                "image_source": "data/images/courses/waving.jpg"
+            }
+        ],
+        "questions": [
+            {
+                "question": "Who are we?",
+                "answer": "Finwise"
+            },
+            {
+                "question": "What are our goals?",
+                "answer": "Improve Financial Literacy"
+            }
+        ]
     }
 ]
