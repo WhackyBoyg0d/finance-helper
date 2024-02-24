@@ -16,7 +16,9 @@ export function Slide(props: { course: Course; index: number }): JSX.Element {
 					</div>
 					<Question course={props.course}></Question>
 				</div>
-				<OptionalImage src={slide.image_source}></OptionalImage>
+				<div className="flex align-middle items-center justify-center">
+					<OptionalImage src={slide.image_source}></OptionalImage>
+				</div>
 			</div>
 		</>
 	);

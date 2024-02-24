@@ -39,7 +39,8 @@ function SlideWithControls(props: { course: Course }): JSX.Element {
 						onClick={() => {
 							if (index > 0) setIndex(index - 1);
 						}}
-						className="bg-slate-500 hover:bg-slate-300 text-white font-bold py-1 px-2 flex rounded items-center"
+						disabled={index === 0}
+						className="bg-slate-500 disabled:bg-slate-300 hover:bg-slate-300 text-white font-bold py-1 px-2 flex rounded items-center"
 					>
 						←
 					</button>
@@ -47,7 +48,8 @@ function SlideWithControls(props: { course: Course }): JSX.Element {
 						onClick={() => {
 							if (index < props.course.slides.length - 1) setIndex(index + 1);
 						}}
-						className="bg-slate-500 hover:bg-slate-300 text-white font-bold py-1 px-2 flex rounded items-center"
+						disabled={index === props.course.slides.length - 1}
+						className="bg-slate-500 disabled:bg-slate-300 hover:bg-slate-300 text-white font-bold py-1 px-2 flex rounded items-center"
 					>
 						→
 					</button>
