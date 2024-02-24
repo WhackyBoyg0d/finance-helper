@@ -1,6 +1,6 @@
 import React from "react";
 import { useCountUp } from "use-count-up";
-
+import Navbar from "./Navbar";
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
@@ -21,10 +21,7 @@ export function Profile(): JSX.Element {
     return (
       // <CssVarsProvider theme={theme}>
       <>
-        <div className="flex justify-between px-24 py-12">
-          <h1 className="border-b-2 border-black inline-flex">Profile</h1>
-          <img src={pfp} width="50px" className="rounded-full border-b-2 border-black inline-flex"/>
-        </div>
+      <Navbar />
         <div className="justify-items-start pl-24 my-6 grid grid-cols-2 gap-8"> 
 
         <div className="justify-center">

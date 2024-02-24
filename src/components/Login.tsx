@@ -30,9 +30,12 @@ export function Login(): JSX.Element {
     const user = userData.find((user) => user.username === username && user.password === password);
 
     if (user) {
-		
 		navigate("/profile");
-    sessionStorage.setItem("username", user.username);
+    localStorage.setItem("username", user.username);
+    localStorage.setItem("dayStreaks", "0");
+    localStorage.setItem("totalStreaks","0");
+    localStorage.setItem("date",new Date().toDateString());
+
       console.log("Authentication successful");
     } else {
       // Authentication failed, display an error message or take appropriate action
