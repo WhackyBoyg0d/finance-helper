@@ -37,7 +37,7 @@ export function Question(
                 else {
                     alert("Bad answer");
                 }
-            }}>Submit Answer</input>
+            }}></input>
         </form>
     )
 }
