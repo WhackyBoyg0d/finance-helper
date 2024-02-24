@@ -40,7 +40,8 @@
                     "By definition, investing is defined as:", 
                     "putting (money) into financial schemes, shares, property, or a commercial venture with the expectation of achieving a profit.",
                     "To simplify, you're giving some of your money into certain ideas which works by buying and selling, in the hopes of making a profit by doing so"
-                ]
+                ],
+                "image_source": "waving.jpg"
             },
             {
                 "title": "Different types of investing",
@@ -52,8 +53,18 @@
                     "-Convention-defined: Traditional (e.g. Bonds) vs Alternate (e.g. Crypto)",
                     "-In this course, you will primarily learn about Long term conventional investment methods such as Stocks and Bonds.", 
                     "However in some cases, there are also short term offshoots you will also learn such as Day Trading"
-
-                ]
+                ],
+                "image_source": "waving.jpg"
+            }
+        ],
+        "questions": [
+            {
+                "question": "Who are we?",
+                "answer": "Finwise"
+            },
+            {
+                "question": "What are our goals?",
+                "answer": "Improve Financial Literacy"
             }
         ]
     }
