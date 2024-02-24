@@ -5,6 +5,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 import pfp from '../assets/pfp.png';
+import Index from "./courses";
 
 
 export function Profile(): JSX.Element {
@@ -26,6 +27,7 @@ export function Profile(): JSX.Element {
 
         <div className="justify-center">
           <h2 className="border-b-2 border-r-2 border-black inline-flex mb-4 pr-2">Your Courses</h2>
+          <Index />
         </div>
 
         <div className="flex-end flex justify-end">
