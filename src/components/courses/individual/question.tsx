@@ -1,4 +1,6 @@
-function Question(
+import React from "react";
+
+export function Question(
     props: {
         course: Course;
         index: number; 
@@ -13,6 +15,8 @@ function Question(
     const answers = [questions[props.index].answer];
 
     for(let i = 0; i < ANSWER_COUNT; i++) answers.push(selectRandomAnswer(allPossibleAnswers, answers));
+
+    shuffleArr(answers);
 
     return (
         <form>
@@ -33,3 +37,12 @@ function selectRandomAnswer(allAnswers: Array<string>, alreadyUsedAnswers: Array
 
     return filteredAnswers[(Math.floor(Math.random() * filteredAnswers.length))]
 }
+
+function shuffleArr(array: Array<any>){
+    for (var i = array.length - 1; i > 0; i--) {
+        var rand = Math.floor(Math.random() * (i + 1));
+        [array[i], array[rand]] = [array[rand], array[i]]
+    }
+}
+
+export default Question;

@@ -1,4 +1,6 @@
-function Slide(
+import React from "react";
+
+export function Slide(
     props: {
         course: Course;
         index: number; 
@@ -18,3 +20,5 @@ function Slide(
         </div>
     );
 }
+
+export default Slide;
