@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import coursesJson from 'data/courses.json';
-
-interface Course {
-    name: string;
-}
+import { Link } from "react-router-dom";
 
 export function Index(): JSX.Element {
-    const courses: Array<Course> = JSON.parse(coursesJson.toString());
+    const courses: Array<Course> = coursesJson;
 
     return (
         <div>
@@ -15,7 +12,7 @@ export function Index(): JSX.Element {
             <ul>
                 {courses.map((course) => {
                     return (
-                        <li>{course.name}</li>
+                        <li><Link to={course.name}>Course on: {course.name}</Link></li>
                     )
                 })}
             </ul>

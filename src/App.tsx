@@ -4,7 +4,7 @@ import './App.css';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Login from "./components/Login";
-import Courses from './components/courses/Courses';
+import CourseSelector from './components/courses/CourseSelector';
 
 function App(): JSX.Element {
   return (
@@ -12,7 +12,7 @@ function App(): JSX.Element {
 		  <Routes>
 			  <Route path="/" element={<Home />} />
 			  <Route path="/profile" element={<Profile />} />
-			  <Route path="/courses/*" element={<Courses />} />
+			  <Route path="/courses/*" element={<CourseSelector />} />
 			  <Route path="/login" element={<Login />} />
 		  </Routes>
 	</BrowserRouter>
