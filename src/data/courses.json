@@ -8,7 +8,7 @@
                     "Hi, we would like to welcome you to Finwise",
                     "We are a financial planner aimed to improve financial literacy in our users"
                 ],
-                "image_source": "data/images/courses/welcome.jpg"
+                "image_source": "welcome.jpg"
             },
             {
                 "title": "Getting started",
@@ -16,7 +16,7 @@
                     "This is your first course",
                     "We have many more courses like these aimed to help users like you"
                 ],
-                "image_source": "data/images/courses/waving.jpg"
+                "image_source": "waving.jpg"
             }
         ],
         "questions": [

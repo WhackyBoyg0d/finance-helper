@@ -47,7 +47,7 @@ function Slide(
                     <p>{paragraph}</p>
                 )
             })}
-            <img src={slide.image_source}></img>
+            <img src={require("data/images/courses/" + slide.image_source)}></img>
         </div>
     );
 }
