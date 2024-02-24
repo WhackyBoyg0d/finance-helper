@@ -4,11 +4,11 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import finwise from '../assets/finwise.png';
 import { FaGoogle } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import { auth, database } from "../firebase";
 import { FaFacebook } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa";
-import { auth} from "../firebase";
-
-
+import { get, ref } from 'firebase/database';
+import { UserData } from '../userInterface'; 
 
 export function Login(): JSX.Element {
   const [username, setUsername] = useState("");
@@ -17,9 +17,22 @@ export function Login(): JSX.Element {
 
   const handleLogin = async () => {
     try {
-      await signInWithEmailAndPassword(auth, username, password);
-      // You can navigate to another page upon successful login
+    const userCredential = await signInWithEmailAndPassword(auth, username, password);
+    const user = userCredential.user;
+    // Fetch additional user data from the database using the user's UID
+    const userRef = ref(database, `users/${user.uid}`);
+    const userDataSnapshot = await get(userRef);
+    const userData: UserData | null = userDataSnapshot.val();
+
+    if (userData) {
+      console.log('User Data:', userData);
+    } else {
+      console.log('User Data not found.');
+    }
+
+      // Redirect to the home page
       navigate('/');
+
     } catch (error) {
       console.error('Error logging in:');
     }

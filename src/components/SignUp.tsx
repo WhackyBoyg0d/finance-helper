@@ -19,7 +19,6 @@ const SignUp: React.FC = () => {
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
