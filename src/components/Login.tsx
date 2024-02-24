@@ -31,7 +31,7 @@ export function Login(): JSX.Element {
     }
 
       // Redirect to the home page
-      navigate('/');
+      navigate('/Profile');
 
     } catch (error) {
       console.error('Error logging in:');
