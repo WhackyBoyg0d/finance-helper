@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Introduction",
+        "slides": [
+            {
+                "title": "Welcome to Finwise",
+                "body": [
+                    "Hi, we would like to welcome you to Finwise",
+                    "We are a financial planner aimed to improve financial literacy in our users"
+                ],
+                "image_source": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F414612%2Fpexels-photo-414612.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-james-wheeler-414612.jpg%26fm%3Djpg&tbnid=0Yr2UV2AytexjM&vet=12ahUKEwjdv-vf8sOEAxXsUkEAHWL3DscQMygIegQIARBY..i&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbeautiful%2F&docid=B51x0PBR9KNzvM&w=5306&h=3770&q=image&ved=2ahUKEwjdv-vf8sOEAxXsUkEAHWL3DscQMygIegQIARBY"
+            },
+            {
+                "title": "Getting started",
+                "body": [
+                    "This is your first course",
+                    "We have many more courses like these aimed to help users like you"
+                ],
+                "image_source": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fbackground&psig=AOvVaw3d4P75pTE7faujFI5ysr6j&ust=1708861351412000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNiMz-Pyw4QDFQAAAAAdAAAAABAI"
+            }
+        ],
+        "questions": [
+            {
+                "question": "Who are we?",
+                "answer": "Finwise"
+            },
+            {
+                "question": "What are our goals?",
+                "answer": "Improve Financial Literacy"
+            }
+        ]
+    }
+]

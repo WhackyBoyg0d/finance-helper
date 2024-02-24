@@ -1,14 +1,17 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-
-export function Course(): JSX.Element {
-    const courseID = useParams();
-
-    console.log(courseID);
-
-    return (
-        <p>Course ID: {courseID.id}</p>
-    )
+interface Course {
+    name: string;
+    slides: Array<Slide>;
+    questions: Array<MultiChoiceQuestion>;
 }
 
-export default Course;
+interface Slide {
+    title: string;
+    body: Array<string>;
+    image_source: string;
+}
+
+interface MultiChoiceQuestion {
+    question: string;
+    answer: string
+}
+

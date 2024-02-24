@@ -4,7 +4,7 @@ import './App.css';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Login from "./components/Login";
-import Courses from './components/courses/Courses';
+import CourseSelector from './components/courses/CourseSelector';
 import Onboarding from './components/onboarding/Onboarding';
 
 function App(): JSX.Element {
@@ -14,7 +14,7 @@ function App(): JSX.Element {
 
 			  <Route path="/" element={<Home />} />
 			  <Route path="/profile" element={<Profile />} />
-			  <Route path="/courses/*" element={<Courses />} />
+			  <Route path="/courses/*" element={<CourseSelector />} />
 			  <Route path="/login" element={<Login />} />
 			  <Route path="/onboarding" element={<Onboarding />} />
 		  </Routes>
