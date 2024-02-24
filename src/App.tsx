@@ -8,6 +8,7 @@ import CourseSelector from './components/courses/CourseSelector';
 import Landing from './components/Landing';
 import Onboarding from './components/onboarding/Onboarding';
 
+
 function App(): JSX.Element {
   return (
 	  <BrowserRouter>
