@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
+
 import coursesJson from 'data/courses.json';
 
 export function IndividualCourse(): JSX.Element {

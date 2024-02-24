@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Index from "./index";
+import Index from "./Index";
 import IndividualCourse from "./individual";
 
 export function CourseSelector(): JSX.Element {
