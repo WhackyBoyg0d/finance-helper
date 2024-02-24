@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import Question from "./question"
+import Slide from "./slide";
 
 
 import coursesJson from 'data/courses.json';
@@ -16,22 +18,45 @@ export function IndividualCourse(): JSX.Element {
         return {} as Course;
     })();
 
-    const [slideIndex, setSlideIndex] = useState(0);
-
     return (
         <div>
             <p>{course.name}</p>
-            <button onClick={() => {
-                if(slideIndex > 0) setSlideIndex(slideIndex - 1)
-            }}>←</button>
-            <button onClick={() => {
-                if(slideIndex < course.slides.length - 1) setSlideIndex(slideIndex + 1)
-            }}>→</button>
-            <Slide course={course} index={slideIndex}></Slide>
-            <Question course={course} index={0}></Question>
+            <SlideWithControls course={course}></SlideWithControls>
+            <QuestionWithControls course={course}></QuestionWithControls>
         </div>
     )
 }
 
+function SlideWithControls(props: {course: Course}): JSX.Element {
+    const [index, setIndex] = useState(0);
+
+    return (
+        <div>
+            <button onClick={() => {
+                    if(index > 0) setIndex(index - 1)
+                }}>←</button>
+                <button onClick={() => {
+                    if(index < props.course.slides.length - 1) setIndex(index + 1)
+                }}>→</button>
+                <Slide course={props.course} index={index}></Slide>
+        </div>
+    )
+}
+
+function QuestionWithControls(props: {course: Course}): JSX.Element {
+    const [index, setIndex] = useState(0);
+
+    return (
+        <div>
+            <button onClick={() => {
+                    if(index > 0) setIndex(index - 1)
+                }}>←</button>
+                <button onClick={() => {
+                    if(index < props.course.questions.length - 1) setIndex(index + 1)
+                }}>→</button>
+                <Question course={props.course} index={index}></Question>
+        </div>
+    )
+}
 
 export default IndividualCourse;

@@ -1,4 +1,6 @@
-function Question(
+import React, { useState } from "react";
+
+export function Question(
     props: {
         course: Course;
         index: number; 
@@ -14,16 +16,28 @@ function Question(
 
     for(let i = 0; i < ANSWER_COUNT; i++) answers.push(selectRandomAnswer(allPossibleAnswers, answers));
 
+    shuffleArr(answers);
+
+    let [selectedAnswer, setSelectedAnswer] = useState("");
+
     return (
         <form>
             <h1>{question}</h1>
             {answers.map((answer: string) => {
                 if(answer != undefined) {
                     return (
-                        <label><input type='radio' name="answer" value={answer}></input>{answer}</label>
+                        <label><input type='radio' name="answer" value={answer} onChange={() => setSelectedAnswer(answer)}></input>{answer}</label>
                     )
                 }
             })}
+            <input type="submit" value="Submit" onChange={() => {
+                if(selectedAnswer == questions[props.index].answer) {
+                    alert("Correct answer!");
+                }
+                else {
+                    alert("Bad answer");
+                }
+            }}>Submit Answer</input>
         </form>
     )
 }
@@ -33,3 +47,12 @@ function selectRandomAnswer(allAnswers: Array<string>, alreadyUsedAnswers: Array
 
     return filteredAnswers[(Math.floor(Math.random() * filteredAnswers.length))]
 }
+
+function shuffleArr(array: Array<any>){
+    for (var i = array.length - 1; i > 0; i--) {
+        var rand = Math.floor(Math.random() * (i + 1));
+        [array[i], array[rand]] = [array[rand], array[i]]
+    }
+}
+
+export default Question;
