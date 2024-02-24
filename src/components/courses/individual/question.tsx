@@ -1,50 +1,50 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const ANSWER_COUNT = 5;
 
 export function Question(
     props: {
         course: Course;
-        index: number; 
     }): JSX.Element {
-    
-    const ANSWER_COUNT = 5;
 
-    const questions = props.course.questions;
-    const question = questions[props.index].question;
+    const navigate = useNavigate();
+    const [index, setIndex] = useState(0);
 
-    const allPossibleAnswers = questions.map((questionWithAnswer) => questionWithAnswer.answer);
-
-    const answers = [questions[props.index].answer];
-    for(let i = 0; i < ANSWER_COUNT; i++) answers.push(selectRandomAnswer(allPossibleAnswers, answers));
-
-    let [shuffledAnswers, setShuffledAnswers] = useState(answers);
+    let [answer, setAnswer] = useState("");
+    let [question, setQuestion] = useState(props.course.questions[index].question);
 
     useEffect(() => {
+        setQuestion(props.course.questions[index].question);
+
+        const allPossibleAnswers = props.course.questions.map((questionWithAnswer) => questionWithAnswer.answer);
+
+        const answers = [props.course.questions[index].answer];
+        for(let i = 0; i < ANSWER_COUNT; i++) answers.push(selectRandomAnswer(allPossibleAnswers, answers));
+
         shuffleArr(answers)
         setShuffledAnswers(answers);
-    }, [props.index]);
+    }, [index]);
 
-    let [selectedAnswer, setSelectedAnswer] = useState("");
+    let [shuffledAnswers, setShuffledAnswers] = useState([] as Array<string>);
 
     return (
-        <form>
+        <div>
             <h1>{question}</h1>
-            {shuffledAnswers.map((answer: string, index: number) => {
-                if(answer != undefined) {
+            {shuffledAnswers.map((answer: string, answerIndex: number) => {
+                if(answer !== undefined) {
                     return (
-                        <label key={"answer" + index}><input type='radio' name="answer" value={answer} onChange={() => setSelectedAnswer(answer)}></input>{answer}</label>
+                        <label key={"answer" + answerIndex}><input type='radio' name="answer" onChange={(element) => setAnswer(answer)}></input>{answer}</label>
                     )
                 }
             })}
             <button onClick={() => {
-                console.log(selectedAnswer);
-                if(selectedAnswer == questions[props.index].answer) {
-                    alert("Correct answer!");
-                }
-                else {
-                    alert("Bad answer");
-                }
+                if(answer === props.course.questions[index].answer) alert("TODO increase points for right answer");
+                    
+                if(index < props.course.questions.length - 1) setIndex(index + 1)
+                else navigate("/courses")
             }}>Submit</button>
-        </form>
+        </div>
     )
 }
 

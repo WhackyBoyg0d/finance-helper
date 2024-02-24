@@ -22,7 +22,7 @@ export function IndividualCourse(): JSX.Element {
         <div>
             <p>{course.name}</p>
             <SlideWithControls course={course}></SlideWithControls>
-            <QuestionWithControls course={course}></QuestionWithControls>
+            <Question course={course}></Question>
         </div>
     )
 }
@@ -39,22 +39,6 @@ function SlideWithControls(props: {course: Course}): JSX.Element {
                     if(index < props.course.slides.length - 1) setIndex(index + 1)
                 }}>→</button>
                 <Slide course={props.course} index={index}></Slide>
-        </div>
-    )
-}
-
-function QuestionWithControls(props: {course: Course}): JSX.Element {
-    const [index, setIndex] = useState(0);
-
-    return (
-        <div>
-            <button onClick={() => {
-                    if(index > 0) setIndex(index - 1)
-                }}>←</button>
-                <button onClick={() => {
-                    if(index < props.course.questions.length - 1) setIndex(index + 1)
-                }}>→</button>
-                <Question course={props.course} index={index}></Question>
         </div>
     )
 }
