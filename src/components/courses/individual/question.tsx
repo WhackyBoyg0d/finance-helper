@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import "react-toastify/dist/ReactToastify.css";
+
+import { Bounce, toast, ToastContainer, ToastPosition } from "react-toastify";
+
 const ANSWER_COUNT = 5;
 
 export function Question(props: { course: Course }): JSX.Element {
 	const navigate = useNavigate();
 	const [index, setIndex] = useState(0);
+	const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+
+	const [isOptionSelected, setisOptionSelected] = useState(false);
 
 	let [answer, setAnswer] = useState("");
 	let [question, setQuestion] = useState(
@@ -30,50 +37,81 @@ export function Question(props: { course: Course }): JSX.Element {
 	let [shuffledAnswers, setShuffledAnswers] = useState([] as Array<string>);
 
 	return (
-		<div className="m-12 mx-16 py-8 justify-center items-center flex flex-col border-2 border-black  rounded-md">
-			<div className="mb-4 text-xl font-semibold border-b-[2px] border-black">
-				<h1 className="">{question}</h1>
-			</div>
-			<div className="grid grid-cols-2 ">
-				<div className="flex flex-col gap-2">
-					{shuffledAnswers.map((answer: string, answerIndex: number) => {
-						if (answer !== undefined) {
-							return (
-								<div className="flex flex-row">
-									<label
-										key={"answer" + answerIndex}
-										className="flex flex-row gap-2"
-									>
-										<input
-											type="radio"
-											name="answer"
-											onChange={(element) => setAnswer(answer)}
-											className=" cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
-										></input>
-										<p>{answer}</p>
-									</label>
-								</div>
-							);
-						}
-					})}
+		<>
+			<div className="m-12 mx-16 py-8 justify-center items-center flex flex-col border-2 border-black  rounded-md">
+				<div className="mb-4 text-xl font-semibold border-b-[2px] border-black">
+					<h1 className="">{question}</h1>
 				</div>
-				<div className="flex items-center justify-center">
-					<button
-						onClick={() => {
-							if (answer === props.course.questions[index].answer)
-								alert("TODO increase points for right answer");
+				<div className="grid grid-cols-2 ">
+					<div className="flex flex-col gap-2">
+						{shuffledAnswers.map((answer: string, answerIndex: number) => {
+							if (answer !== undefined) {
+								return (
+									<div className="flex flex-row">
+										<label
+											key={"answer" + answerIndex}
+											className="flex flex-row gap-2"
+										>
+											<input
+												type="radio"
+												name="answer"
+												checked={selectedAnswer === answer}
+												onChange={() => {
+													setAnswer(answer);
+													setisOptionSelected(true);
+													setSelectedAnswer(answer);
+												}}
+												className=" cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white"
+											></input>
+											<p>{answer}</p>
+										</label>
+									</div>
+								);
+							}
+						})}
+					</div>
+					<div className="flex items-center justify-center">
+						<button
+							onClick={() => {
+								if (answer === props.course.questions[index].answer) {
+									alert("TODO increase points for right answer");
+									setisOptionSelected(false);
+									setSelectedAnswer(null);
+								}
 
-							if (index < props.course.questions.length - 1)
-								setIndex(index + 1);
-							else navigate("/courses");
-						}}
-						className="bg-emerald-500   text-white p-2 m-2 rounded-md hover:bg-emerald-300 hover:text-white"
-					>
-						Submit
-					</button>
+								if (answer !== props.course.questions[index].answer) {
+									toast.error("Try again!");
+									setSelectedAnswer(null);
+									return;
+								}
+
+								if (index < props.course.questions.length - 1)
+									setIndex(index + 1);
+								else navigate("/courses");
+							}}
+							disabled={!isOptionSelected}
+							className="bg-emerald-500 disabled:bg-emerald-300 text-white p-2 m-2 rounded-md hover:bg-emerald-300 hover:text-white"
+						>
+							Submit
+						</button>
+					</div>
 				</div>
 			</div>
-		</div>
+
+			<ToastContainer
+				position="bottom-center"
+				autoClose={2000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="colored"
+				transition={Bounce}
+			/>
+		</>
 	);
 }
 
