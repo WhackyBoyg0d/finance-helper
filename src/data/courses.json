@@ -29,5 +29,32 @@
                 "answer": "Improve Financial Literacy"
             }
         ]
+    },
+    {
+        "name": "Investing:",
+        "slides": [
+            {
+                "title": "Basics of investing",
+                "body": [
+                    "What is investing?",
+                    "By definition, investing is defined as:", 
+                    "putting (money) into financial schemes, shares, property, or a commercial venture with the expectation of achieving a profit.",
+                    "To simplify, you're giving some of your money into certain ideas which works by buying and selling, in the hopes of making a profit by doing so"
+                ]
+            },
+            {
+                "title": "Different types of investing",
+                "body": [
+                    "-As we saw in the previous slides, we have different mechanisms to put money into which can turn a profit", 
+                    "But how do we differentiate between them?",
+                    "-That's done under 2 different ways; the time, and its general convention in how investors invest",
+                    "-Time-defined: Long term (e.g. Holding stocks long term) vs Short term (e.g. Day Trading)",
+                    "-Convention-defined: Traditional (e.g. Bonds) vs Alternate (e.g. Crypto)",
+                    "-In this course, you will primarily learn about Long term conventional investment methods such as Stocks and Bonds.", 
+                    "However in some cases, there are also short term offshoots you will also learn such as Day Trading"
+
+                ]
+            }
+        ]
     }
 ]
