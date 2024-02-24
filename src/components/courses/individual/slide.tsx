@@ -8,6 +8,7 @@ export function Slide(
 
     const slide = props.course.slides[props.index];
 
+
     return (
         <div>
             <h1>{slide.title}</h1>
@@ -16,9 +17,15 @@ export function Slide(
                     <p>{paragraph}</p>
                 )
             })}
-            <img src={require("data/images/courses/" + slide.image_source)}></img>
+            <OptionalImage src={slide.image_source}></OptionalImage>
         </div>
     );
+}
+
+function OptionalImage(props: {src: string | null}) {
+    if(props.src != null) return (
+        <img src={require("data/images/courses/" + props.src as string)}></img>
+    )
 }
 
 export default Slide;

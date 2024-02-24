@@ -7,7 +7,7 @@ interface Course {
 interface Slide {
     title: string;
     body: Array<string>;
-    image_source: string;
+    image_source: string | null;
 }
 
 interface MultiChoiceQuestion {
