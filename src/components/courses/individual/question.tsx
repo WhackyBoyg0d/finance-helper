@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function Question(
     props: {
@@ -18,16 +18,26 @@ export function Question(
 
     shuffleArr(answers);
 
+    let [selectedAnswer, setSelectedAnswer] = useState("");
+
     return (
         <form>
             <h1>{question}</h1>
             {answers.map((answer: string) => {
                 if(answer != undefined) {
                     return (
-                        <label><input type='radio' name="answer" value={answer}></input>{answer}</label>
+                        <label><input type='radio' name="answer" value={answer} onChange={() => setSelectedAnswer(answer)}></input>{answer}</label>
                     )
                 }
             })}
+            <input type="submit" value="Submit" onChange={() => {
+                if(selectedAnswer == questions[props.index].answer) {
+                    alert("Correct answer!");
+                }
+                else {
+                    alert("Bad answer");
+                }
+            }}></input>
         </form>
     )
 }

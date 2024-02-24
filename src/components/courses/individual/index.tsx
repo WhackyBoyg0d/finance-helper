@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Question from "./question"
 import Slide from "./slide";
 
+
 import coursesJson from 'data/courses.json';
 
 export function IndividualCourse(): JSX.Element {
