@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import coursesJson from 'data/courses.json';
+
+interface Course {
+    name: string;
+}
 
 export function Index(): JSX.Element {
+    const courses: Array<Course> = JSON.parse(coursesJson.toString());
+
     return (
         <div>
             <h1>Course Selector</h1>
             <ul>
-                <li>Course 1</li>
-                <li>Course 2</li>
-                <li>Course 3</li>
-                <li>Course 4</li>
+                {courses.map((course) => {
+                    return (
+                        <li>{course.name}</li>
+                    )
+                })}
             </ul>
         </div>
     )
