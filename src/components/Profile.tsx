@@ -7,6 +7,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { UserData } from '../userInterface';
 import pfp from '../assets/pfp.png';
+import Index from "./courses";
 
 const Profile: React.FC = () => {
   const [userData, setUserData] = useState<UserData | null>(null);
@@ -41,6 +42,7 @@ const Profile: React.FC = () => {
       <div className="justify-items-start pl-24 my-6 grid grid-cols-2 gap-8">
         <div className="justify-center">
           <h2 className="border-b-2 border-r-2 border-black inline-flex mb-4 pr-2">Your Courses</h2>
+          <Index />
         </div>
 
         <div className="flex-end flex justify-end">

@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import coursesJson from 'data/courses.json';
 import { Link } from "react-router-dom";
+import Navbar from "../../Navbar";
 
 export function Index(): JSX.Element {
     const courses: Array<Course> = coursesJson;
 
     return (
+        <>
         <div className="flex justify-center m-4 flex-col items-center">
             <h1 className="border-b-2 border-black inline-flex mb-4">Course Selector</h1>
             <ul>
@@ -30,6 +32,7 @@ export function Index(): JSX.Element {
                 })}
             </ul>
         </div>
+                </>
     )
 }
 
