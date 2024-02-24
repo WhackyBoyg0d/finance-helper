@@ -30,14 +30,15 @@ export function Question(
                     )
                 }
             })}
-            <input type="submit" value="Submit" onChange={() => {
+            <button onClick={() => {
+                console.log(selectedAnswer);
                 if(selectedAnswer == questions[props.index].answer) {
                     alert("Correct answer!");
                 }
                 else {
                     alert("Bad answer");
                 }
-            }}></input>
+            }}>Submit</button>
         </form>
     )
 }
