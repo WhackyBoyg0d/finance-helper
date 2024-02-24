@@ -28,10 +28,10 @@ export function Question(
     return (
         <form>
             <h1>{question}</h1>
-            {shuffledAnswers.map((answer: string) => {
+            {shuffledAnswers.map((answer: string, index: number) => {
                 if(answer != undefined) {
                     return (
-                        <label><input type='radio' name="answer" value={answer} onChange={() => setSelectedAnswer(answer)}></input>{answer}</label>
+                        <label key={"answer" + index}><input type='radio' name="answer" value={answer} onChange={() => setSelectedAnswer(answer)}></input>{answer}</label>
                     )
                 }
             })}

@@ -12,9 +12,9 @@ export function Slide(
     return (
         <div>
             <h1>{slide.title}</h1>
-            {slide.body.map((paragraph: string) => {
+            {slide.body.map((paragraph: string, index: number) => {
                 return (
-                    <p>{paragraph}</p>
+                    <p key={"paragraph" + index}>{paragraph}</p>
                 )
             })}
             <OptionalImage src={slide.image_source}></OptionalImage>
