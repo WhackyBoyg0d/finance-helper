@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export function Question(
     props: {
@@ -12,22 +12,38 @@ export function Question(
     const question = questions[props.index].question;
 
     const allPossibleAnswers = questions.map((questionWithAnswer) => questionWithAnswer.answer);
-    const answers = [questions[props.index].answer];
 
+    const answers = [questions[props.index].answer];
     for(let i = 0; i < ANSWER_COUNT; i++) answers.push(selectRandomAnswer(allPossibleAnswers, answers));
 
-    shuffleArr(answers);
+    let [shuffledAnswers, setShuffledAnswers] = useState(answers);
+
+    useEffect(() => {
+        shuffleArr(answers)
+        setShuffledAnswers(answers);
+    }, [props.index]);
+
+    let [selectedAnswer, setSelectedAnswer] = useState("");
 
     return (
         <form>
             <h1>{question}</h1>
-            {answers.map((answer: string) => {
+            {shuffledAnswers.map((answer: string, index: number) => {
                 if(answer != undefined) {
                     return (
-                        <label><input type='radio' name="answer" value={answer}></input>{answer}</label>
+                        <label key={"answer" + index}><input type='radio' name="answer" value={answer} onChange={() => setSelectedAnswer(answer)}></input>{answer}</label>
                     )
                 }
             })}
+            <button onClick={() => {
+                console.log(selectedAnswer);
+                if(selectedAnswer == questions[props.index].answer) {
+                    alert("Correct answer!");
+                }
+                else {
+                    alert("Bad answer");
+                }
+            }}>Submit</button>
         </form>
     )
 }
