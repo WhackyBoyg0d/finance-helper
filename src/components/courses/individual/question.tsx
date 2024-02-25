@@ -79,7 +79,7 @@ export function Question(props: { course: Course }): JSX.Element {
 						<button
 							onClick={() => {
 								if (answer === props.course.questions[index].answer) {
-									addUserPoint();
+									updateCourseWithPoint(props.course, index);
 									setisOptionSelected(false);
 									setSelectedAnswer(null);
 								}
@@ -93,7 +93,6 @@ export function Question(props: { course: Course }): JSX.Element {
 								if (index < props.course.questions.length - 1)
 									setIndex(index + 1);
 								else {
-									addCompletedCourse(props.course);
 									navigate("/courses");
 								}
 							}}
@@ -141,21 +140,7 @@ function shuffleArr(array: Array<any>) {
 	}
 }
 
-async function addUserPoint() {
-	const authUser = auth.currentUser;
-	if(!authUser) console.error("User not logged in");
-	else {
-		const userRef = ref(database, `users/${authUser.uid}`);
-		const userDataSnapshot = await get(userRef);
-
-		const user: User = userDataSnapshot.val();
-		user.points += 1
-
-		set(userRef, user);
-	}
-}
-
-async function addCompletedCourse(course: Course) {
+async function updateCourseWithPoint(course: Course, index: number) {
 	const authUser = auth.currentUser;
 	if(!authUser) console.error("User not logged in");
 	else {
@@ -164,11 +149,18 @@ async function addCompletedCourse(course: Course) {
 
 		const user: User = userDataSnapshot.val();
 		user.dateLastCompletedCourse = Date.now();
-		if(user.coursesCompleted) {
-			user.coursesCompleted.push(course);
+		if(user.courseCompletions) {
+			for(const completedCourse of user.courseCompletions) {
+				if(completedCourse.name == course.name) {
+					completedCourse.questionsCorrect.push(course.questions[index].question);
+				}
+			}
 		}
 		else {
-			user.coursesCompleted = [course];
+			user.courseCompletions = [{
+				name: course.name,
+				questionsCorrect: [course.questions[index].question]
+			}]
 		}
 
 		set(userRef, user);
