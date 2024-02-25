@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import HighchartsSankey from "highcharts/modules/sankey";
-import Navbar from "Navbar";
+import Navbar from "../common/Navbar";
 
 // Initialize the Sankey module
 HighchartsSankey(Highcharts);
