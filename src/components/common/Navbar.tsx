@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { onAuthStateChanged, Auth, User } from 'firebase/auth';
 import { auth, database} from '../../firebase'; // Import the necessary Firebase modules
 import finwise from 'assets/finwise.png';
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
   return (
     <div>
       <header className="w-full p-8 bg-white shadow-lg flex justify-between items-center">
-        <p className="text-2xl font-bold">FINWISE</p>
+      <Link to="/"><p className="text-2xl font-bold">FINWISE</p></Link>
         <div className="flex items-center">
           <button onClick={() => navigate("/courses")} className="text-xl font-bold mx-2 hover:text-blue-500">Courses</button>
           <button onClick={() => navigate("/budget")} className="text-xl font-bold mx-2 hover:text-blue-500">Budget</button>
