@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { onAuthStateChanged, Auth, User } from "firebase/auth";
-import { auth, database } from "../firebase"; // Import the necessary Firebase modules
-import finwise from "../assets/finwise.png";
-import pfp from "../assets/pfp.png";
+import { auth, database } from "../../firebase"; // Import the necessary Firebase modules
+import finwise from "assets/finwise.png";
+import pfp from "assets/pfp.png";
 import { get, ref } from "firebase/database";
 
 const Navbar: React.FC = () => {
@@ -38,12 +38,9 @@ const Navbar: React.FC = () => {
 	return (
 		<div>
 			<header className="w-full p-8 bg-white shadow-lg flex justify-between items-center">
-				<button
-					className="text-2xl font-bold mx-6"
-					onClick={() => navigate("/profile")}
-				>
-					FINWISE
-				</button>
+				<Link to="/">
+					<p className="text-2xl font-bold">FINWISE</p>
+				</Link>
 				<div className="flex items-center">
 					<button
 						onClick={() => navigate("/courses")}

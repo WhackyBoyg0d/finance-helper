@@ -1,11 +1,11 @@
 // src/components/SignUp.tsx
 import React, { useState } from 'react';
-import { auth, database } from "../firebase";
+import { auth, database } from "../../firebase";
 import { ref, set } from 'firebase/database';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { UserData } from '../userInterface'; 
+import { User } from '../common/user'; 
 import { useNavigate } from 'react-router-dom';
-import finwise from '../assets/finwise.png';
+import finwise from 'assets/finwise.png';
 // import { FaGoogle } from "react-icons/fa";
 // import {FaTwitter} from "react-icons/fa";
 // import {FaFacebook} from "react-icons/fa";
@@ -27,11 +27,7 @@ const SignUp: React.FC = () => {
       console.log(user);
 
       const userRef = ref(database, `users/${user.uid}`);
-      const userData: UserData = {
-        username,
-        email: user.email || '',
-        // other user properties...
-      };
+      const userData: User = new User(username, email);
 
       set(userRef, userData);
       window.alert('Successfully registered');

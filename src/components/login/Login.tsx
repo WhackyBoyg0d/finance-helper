@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import finwise from '../assets/finwise.png';
+import finwise from 'assets/finwise.png';
 import { FaGoogle } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { auth, database } from "../firebase";
+import { auth, database } from "../../firebase";
 import { FaFacebook } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa";
 import { get, ref } from 'firebase/database';
-import { UserData } from '../userInterface'; 
+import { User } from '../common/user'; 
 
 export function Login(): JSX.Element {
   const [username, setUsername] = useState("");
@@ -22,7 +22,7 @@ export function Login(): JSX.Element {
     // Fetch additional user data from the database using the user's UID
     const userRef = ref(database, `users/${user.uid}`);
     const userDataSnapshot = await get(userRef);
-    const userData: UserData | null = userDataSnapshot.val();
+    const userData: User | null = userDataSnapshot.val();
 
     if (userData) {
       console.log('User Data:', userData);
