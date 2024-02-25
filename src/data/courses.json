@@ -6,9 +6,9 @@
                 "title": "Welcome to Finwise",
                 "body": [
                     "Hi, we would like to welcome you to Finwise",
-                    "We are a 5 member team",
-                    "We are a financial aid aimed to improve financial literacy in our users",
-                    "We promote education through reinforcement learning directly after reading"
+                  "We are a 5 member team",
+                  "We are a financial aid aimed to improve financial literacy in our users",
+                  "We promote education through reinforcement learning directly after reading"
                 ],
                 "image_source": "welcome.jpg"
             },
@@ -78,7 +78,8 @@
                     "This includes terms (aside from the investment method names) such as:",
                     "Limited Liability - If a firm goes bankrupt (has no money), you will only lose what you invested and not your own assets like your house",
                     "Portfolio - A collection of your investments which show your current prices and other relevant data",
-                    "Capital - The money you invest"
+                    "Capital - The money you invest",
+                    "ROI (Return on Investment) -- Profits made from your investment shown as a percentage of your initial investment."
                 ],
                 "image_source": null
             },
@@ -106,7 +107,7 @@
             }
 
         ],
-        "questions": [
+        "questions":[
             {
                 "question": "What is investing?",
                 "answer": "Putting (money) into financial schemes, shares, property, or a commercial venture with the expectation of achieving a profit"
@@ -211,7 +212,7 @@
                 "image_source": null
             }
         ],
-        "questions": [
+        "questions":[
             {
                 "question": "What is a Stock?",
                 "answer": "A fragment of a company that you own when bought"
@@ -427,87 +428,97 @@
             {
                 "title": "Introduction to Mutual Funds",
                 "body":[
-                    ""
+                    "A mutual fund is also a basket of stocks (like ETFs), however they work different:",
+                    "1. Mutual funds require more in deposits to invest (maybe a step once you have made enough?)",
+                    "2. Mutual funds are actively managed, so they will derive more profit than ETFs.",
+                    "There are also different types of Mutual Fund:",
+                    "Equity (invests in stocks)",
+                    "Debt (invests in fixed-income securities)",
+                    "Hybrid (Balances risk and return with a mix of assets)"
                 ],
                 "image_source": null
             },
             {
-                "title": "How they work",
+                "title": "How do they work",
                 "body":[
-                    ""
-                ],
-                "image_source": null
-            },
-            {
-                "title": "Concepts",
-                "body":[
-                    ""
+                    "What mutual funds do is that they take the capital invested, invest it in a basket,",
+                    "and change stocks within those baskets as they need to derive profits. Takes out research for you."
                 ],
                 "image_source": null
             },
             {
                 "title": "Selecting the right mutual fund",
                 "body":[
-                    ""
+                    "in selecting the right mutual fund, we must:",
+                    "1. Assess how much risk we can actually take up with it.",
+                    "2. See if the expected returns align with our short/long term investment goals."
                 ],
                 "image_source": null
             },
             {
                 "title": "Research and Analysis",
                 "body":[
-                    ""
+                    "In researching and analysing mutual funds, we must look at: ",
+                    "Reading fund fact sheets (the image)",
+                    "Analysing fund's historical performance and the fund manager's track record (to understand the direction it is being pointed to)"
                 ],
                 "image_source": null
             },
             {
                 "title": "Investing",
                 "body":[
-                    ""
+                    "When investing in Mutual Funds, we must be aware of a few things, namely:",
+                    "1. Choosing the right investment platform",
+                    "2. Creating a mutual fund investment account in order to invest",
+                    "3. Understanding the minimum investment amount in order to trade",
+                    "4. Systematic Investment Plans (SIPs) vs. lump-sum investments",
+                    "(ie investing fixed amounts at predetermined times vs investing all at once)"
                 ],
                 "image_source": null
             },
             {
                 "title": "Maintaining and Managing Investments",
                 "body":[
-                    ""
+                    "To maintain and manage the investments you make, you must:",
+                    "1. Constantly monitor your portfolio",
+                    "2. Exit Strategies (i.e. know when you should be cashing out from the investment)"
                 ],
                 "image_source": null
             },
             {
                 "title": "Risks and Rewards",
                 "body":[
-                    ""
+                    "Main risks involve:",
+                    "Market risk",
+                    "Liquidity risk (if the fund goes bankrupt, you are done)",
+                    "",
+                    "However, there is also reward in this method:",
+                    "Because you can get returns of the fund's historical performance when it comes to getting a return on investment."
                 ],
                 "image_source": null
             },
             {
                 "title": "Ethics and Responsible Investing",
                 "body":[
-                    ""
+                    "While you are researching your mutual fund for their potential ROI, do also look at the practices of the fund as well",
+                    "This is because it should be known about the CSR (Corporate Social Responsibility) of the companies said fund invests in",
+                    "One should do this because it is considered good practice and allows for a sustainable future via responsible trading."
                 ],
                 "image_source": null
             }
         ],
         "questions":[
             {
-                "question": "",
-                "answer": ""
+                "question": "Why should you invest ethically?",
+                "answer": "To achieve a sustainable future by responsibly funding the right companies"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What are the 3 types of mutual fund?",
+                "answer": "Equity, Debt, Hybrid"
             },
             {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
+                "question": "How are mutual funds similar to EFTs",
+                "answer": "Use of Net Asset Value to run the business"
             }
         ]
     },
@@ -517,73 +528,64 @@
             {
                 "title": "Introduction to Index Funds",
                 "body":[
-                    ""
+                    "Index funds are also investing firms, however they are formed off using an index to position the funds to invest in."
                 ],
                 "image_source": null
             },
             {
                 "title": "Popular Indexes/benchmarks",
                 "body":[
-                    ""
-                ],
-                "image_source": null
-            },
-            {
-                "title": "How they work",
-                "body":[
-                    ""
+                    "Examples of popular Index Funds would include:",
+                    "S&P 500",
+                    "Dow Jones Industrial Average",
+                    "Global Index Funds"
                 ],
                 "image_source": null
             },
             {
                 "title": "Investing in Indexes",
                 "body":[
-                    ""
+                    "You need to understand Net Asset Value, because that is what it depends on right now"
                 ],
                 "image_source": null
             },
             {
                 "title": "Risks and Rewards",
                 "body":[
-                    ""
+                    "Main Potential Return:",
+                    "You take advantage of the historical performance of major index funds if successful",
+
+                    "Main potential Risk:",
+                    "Market risk and economic factors"
                 ],
                 "image_source": null
             },
             {
                 "title": "Diversification",
                 "body":[
-                    ""
+                    "2 Methods:",
+                    "1. Balance the asset classes and diversify",
+                    "2. Combine index funds as you invest."
                 ],
                 "image_source": null
             },
             {
                 "title": "Tracking Investments",
                 "body":[
-                    ""
+                    "Monitor Performance to ensure it is fine",
+                    "as well as rebalancing your portfolio when needed."
                 ],
                 "image_source": null
             }
         ],
         "questions":[
             {
-                "question": "",
-                "answer": ""
+                "question": "what are index funds?",
+                "answer": "investing firms, however they are formed off using an index to position the funds to invest in."
             },
             {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
+                "question": "What is NAV",
+                "answer": "Net Asset Value"
             }
         ]
     },
@@ -612,12 +614,8 @@
                 "answer": "Diversifying what you invest into because your investment is not doing well."
             },
             {
-                "question": "",
-                "answer": ""
-            },
-            {
-                "question": "",
-                "answer": ""
+                "question": "What is a popular index fund?",
+                "answer": "S&P 500"
             }
         ]
     }
