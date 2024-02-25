@@ -152,7 +152,11 @@ async function updateCourseWithPoint(course: Course, index: number) {
 		if(user.courseCompletions) {
 			for(const completedCourse of user.courseCompletions) {
 				if(completedCourse.name == course.name) {
-					completedCourse.questionsCorrect.push(course.questions[index].question);
+					let exists: boolean = false;
+					for(const questionCorrect of completedCourse.questionsCorrect) {
+						if(questionCorrect == course.questions[index].question) exists = true;
+					}
+					if(!exists) completedCourse.questionsCorrect.push(course.questions[index].question);
 				}
 			}
 		}
