@@ -7,6 +7,7 @@ import CourseSelector from "./components/courses/CourseSelector";
 import Landing from "./components/landing/Landing";
 import Onboarding from "./components/onboarding/Onboarding";
 import SignUp from "./components/signup/SignUp";
+import Budget from "./components/budget/Budget";
 
 function App(): JSX.Element {
 	return (
