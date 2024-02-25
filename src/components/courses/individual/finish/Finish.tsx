@@ -35,7 +35,12 @@ function FinishScreen(): JSX.Element {
             <h1 className="font-bold">You rock! </h1>
             <h1>You finished course: "{courseName}" in just : <span className="font-3xl text-emerald-500 font-extrabold">{time}</span> </h1>
         </div>
-        <button onClick={() => navigate("/profile")}>Return Home</button>
+        <div className="flex justify-center items-center">
+
+        <button onClick={() => navigate("/profile")}
+        className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded"
+        >Return Home 🚀</button>
+        </div>
       </div>
     );
 }
