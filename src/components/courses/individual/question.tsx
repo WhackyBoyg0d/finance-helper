@@ -92,7 +92,10 @@ export function Question(props: { course: Course }): JSX.Element {
 
 								if (index < props.course.questions.length - 1)
 									setIndex(index + 1);
-								else navigate("/courses");
+								else {
+									addCompletedCourse(props.course);
+									navigate("/courses");
+								}
 							}}
 							disabled={!isOptionSelected}
 							className="bg-emerald-500 disabled:bg-emerald-300 text-white p-2 m-2 rounded-md hover:bg-emerald-300 hover:text-white"
@@ -146,7 +149,27 @@ async function addUserPoint() {
 		const userDataSnapshot = await get(userRef);
 
 		const user: User = userDataSnapshot.val();
-		user.points += 1;
+		user.points += 1
+
+		set(userRef, user);
+	}
+}
+
+async function addCompletedCourse(course: Course) {
+	const authUser = auth.currentUser;
+	if(!authUser) console.error("User not logged in");
+	else {
+		const userRef = ref(database, `users/${authUser.uid}`);
+		const userDataSnapshot = await get(userRef);
+
+		const user: User = userDataSnapshot.val();
+		user.dateLastCompletedCourse = Date.now();
+		if(user.coursesCompleted) {
+			user.coursesCompleted.push(course);
+		}
+		else {
+			user.coursesCompleted = [course];
+		}
 
 		set(userRef, user);
 	}
