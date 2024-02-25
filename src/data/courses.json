@@ -6,9 +6,9 @@
                 "title": "Welcome to Finwise",
                 "body": [
                     "Hi, we would like to welcome you to Finwise",
-                  "We are a 5 member team",
-                  "We are a financial aid aimed to improve financial literacy in our users",
-                  "We promote education through reinforcement learning directly after reading"
+                    "We are a 5 member team",
+                    "We are a financial aid aimed to improve financial literacy in our users",
+                    "We promote education through reinforcement learning directly after reading"
                 ],
                 "image_source": "welcome.jpg"
             },
@@ -106,7 +106,7 @@
             }
 
         ],
-        "questions":[
+        "questions": [
             {
                 "question": "What is investing?",
                 "answer": "Putting (money) into financial schemes, shares, property, or a commercial venture with the expectation of achieving a profit"
@@ -211,7 +211,7 @@
                 "image_source": null
             }
         ],
-        "questions":[
+        "questions": [
             {
                 "question": "What is a Stock?",
                 "answer": "A fragment of a company that you own when bought"
@@ -594,7 +594,8 @@
                 "title":"Strategies",
                 "body":[
                     "Enjoy the process! Here are some (new) revision Questions!"
-                ]
+                ],
+                "image_source": null
             }
         ],
         "questions":[
