@@ -41,7 +41,7 @@ export function Question(props: { course: Course }): JSX.Element {
 			}
 		})();
 		else {
-			navigate("/")
+			navigate("/profile")
 		}
 	}, [])
 

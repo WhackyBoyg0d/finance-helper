@@ -12,7 +12,7 @@ export class User {
     }
 }
 
-interface CourseUserRefrence {
+export interface CourseUserRefrence {
     name: string;
     questionsCorrect: Array<string>;
 }
