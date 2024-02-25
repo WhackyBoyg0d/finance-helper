@@ -4,7 +4,7 @@ import Question from "./question";
 import Slide from "./slide";
 
 import coursesJson from "data/courses.json";
-import Navbar from "../../../Navbar";
+import Navbar from "../../common/Navbar";
 
 export function IndividualCourse(): JSX.Element {
 	const courseName = useParams<string>().id;
