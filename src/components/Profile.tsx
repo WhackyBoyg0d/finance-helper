@@ -5,12 +5,12 @@ import Navbar from './Navbar';
 import { useCountUp } from 'use-count-up';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { UserData } from '../userInterface';
+import { User } from '../user';
 import pfp from '../assets/pfp.png';
 import Index from "./courses";
 
 const Profile: React.FC = () => {
-  const [userData, setUserData] = useState<UserData | null>(null);
+  const [userData, setUserData] = useState<User | null>(null);
   const { value: value1 } = useCountUp({
     isCounting: true,
     duration: 2.5,
@@ -25,7 +25,7 @@ const Profile: React.FC = () => {
         if (user) {
           const userRef = ref(database, `users/${user.uid}`);
           const userDataSnapshot = await get(userRef);
-          const fetchedUserData: UserData | null = userDataSnapshot.val();
+          const fetchedUserData: User | null = userDataSnapshot.val();
           setUserData(fetchedUserData);
         }
       } catch (error) {
