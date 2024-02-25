@@ -7,6 +7,7 @@ import { Bounce, toast, ToastContainer } from "react-toastify";
 
 import { auth, database } from "../../../firebase";
 import { ref, set, get } from 'firebase/database';
+import { User as AuthUser } from 'firebase/auth';
 
 import { User } from "components/common/user";
 
@@ -14,17 +15,38 @@ const ANSWER_COUNT = 5;
 
 export function Question(props: { course: Course }): JSX.Element {
 	const navigate = useNavigate();
+
+	const authUser = auth.currentUser;
+
 	const [index, setIndex] = useState(0);
 	const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
 	const [isOptionSelected, setisOptionSelected] = useState(false);
 
 	let [answer, setAnswer] = useState("");
-	let [question, setQuestion] = useState(
-		props.course.questions[index].question
-	);
+	let [question, setQuestion] = useState("Placeholder question");
 
 	useEffect(() => {
+		if(authUser) (async () => {
+			const userRef = ref(database, `users/${authUser.uid}`);
+			const userDataSnapshot = await get(userRef);
+	
+			const user: User = userDataSnapshot.val();
+
+			for(const completedCourse of user.courseCompletions) {
+				if(completedCourse.name == props.course.name) {
+					if(completedCourse.questionsCorrect.length >= props.course.questions.length) navigate("../")
+					setIndex(completedCourse.questionsCorrect.length);
+				}
+			}
+		})();
+		else {
+			navigate("/")
+		}
+	}, [])
+
+	useEffect(() => {
+		console.log("question to be: " + props.course.questions[index].question)
 		setQuestion(props.course.questions[index].question);
 
 		const allPossibleAnswers = props.course.questions.map(
@@ -79,7 +101,7 @@ export function Question(props: { course: Course }): JSX.Element {
 						<button
 							onClick={() => {
 								if (answer === props.course.questions[index].answer) {
-									updateCourseWithPoint(props.course, index);
+									updateCourseWithPoint(authUser, props.course, index);
 									setisOptionSelected(false);
 									setSelectedAnswer(null);
 								}
@@ -140,25 +162,32 @@ function shuffleArr(array: Array<any>) {
 	}
 }
 
-async function updateCourseWithPoint(course: Course, index: number) {
-	const authUser = auth.currentUser;
+async function updateCourseWithPoint(authUser: AuthUser | null, course: Course, index: number) {
 	if(!authUser) console.error("User not logged in");
 	else {
 		const userRef = ref(database, `users/${authUser.uid}`);
 		const userDataSnapshot = await get(userRef);
 
 		const user: User = userDataSnapshot.val();
-		user.dateLastCompletedCourse = Date.now();
 		if(user.courseCompletions) {
+			let courseExists = false;
 			for(const completedCourse of user.courseCompletions) {
 				if(completedCourse.name == course.name) {
+					courseExists = true;
 					let exists: boolean = false;
 					for(const questionCorrect of completedCourse.questionsCorrect) {
 						if(questionCorrect == course.questions[index].question) exists = true;
 					}
-					if(!exists) completedCourse.questionsCorrect.push(course.questions[index].question);
+					if(!exists) {
+						user.dateLastCompletedCourse = Date.now();
+						completedCourse.questionsCorrect.push(course.questions[index].question);
+					}
 				}
 			}
+			if(!courseExists) user.courseCompletions.push({
+				name: course.name,
+				questionsCorrect: [course.questions[index].question]
+			});
 		}
 		else {
 			user.courseCompletions = [{
