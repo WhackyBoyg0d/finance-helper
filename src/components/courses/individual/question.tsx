@@ -116,7 +116,6 @@ export function Question(props: { course: Course, finishHandler: () => void }): 
 								if (index < props.course.questions.length - 1)
 									setIndex(index + 1);
 								else {
-									addCompletedCourse(props.course);
 									props.finishHandler();
 								}
 							}}
