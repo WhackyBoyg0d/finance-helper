@@ -6,9 +6,9 @@
                 "title": "Welcome to Finwise",
                 "body": [
                     "Hi, we would like to welcome you to Finwise",
-                    "We are a 5 member team",
-                    "We are a financial aid aimed to improve financial literacy in our users",
-                    "We promote education through reinforcement learning directly after reading"
+                  "We are a 5 member team",
+                  "We are a financial aid aimed to improve financial literacy in our users",
+                  "We promote education through reinforcement learning directly after reading"
                 ],
                 "image_source": "welcome.jpg"
             },
@@ -45,14 +45,14 @@
         ]
     },
     {
-        "name": "Investing",
+        "name": "Introduction to Investing",
         "slides": [
             {
                 "title": "Basics of investing",
                 "body": [
                     "What is investing?",
                     "By definition, investing is defined as:", 
-                    "putting (money) into financial schemes, shares, property, or a commercial venture with the expectation of achieving a profit.",
+                    "Putting (money) into financial schemes, shares, property, or a commercial venture with the expectation of achieving a profit.",
                     "To simplify, you're giving some of your money into certain ideas which works by buying and selling, in the hopes of making a profit by doing so"
                 ],
                 "image_source": null
@@ -70,13 +70,539 @@
 
                 ],
                 "image_source": null
+            },
+            {
+                "title": "Terminology",
+                "body":[
+                    "When it comes to investing, we may need to gloss over some small terms which have a major meaning that you may not have known.",
+                    "This includes terms (aside from the investment method names) such as:",
+                    "Limited Liability - If a firm goes bankrupt (has no money), you will only lose what you invested and not your own assets like your house",
+                    "Portfolio - A collection of your investments which show your current prices and other relevant data"
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Risks and Rewards",
+                "body":[
+                    "Note: While this website IS financial advice, it is also true that if you do choose to invest",
+                    "because of this course, then be warned that investing is at your own risk, so don't invest more than you can afford to lose",
+                    "However, this is not to discourage you to invest, it is encouraged, because when there is a negative, there is also a positive.",
+                    "In this case, the positive is that there is a financial reward if you do invest properly using our advice, which can be high in certain cases."
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Time Horizon and Investing Goals",
+                "body":[
+                    "Time Horizon refers to the period which you wish to invest for, which is a necessity to know",
+                    "before you start investing, which you should be establishing in your research phase of planning to invest",
+                    "",
+                    "Investing goals are effectively simple goals like why are you investing in the first place.", 
+                    "These are important so that you enjoy the process, and are motivated to learn something new."
+                ],
+                "image_source": null
+            }
+
+        ],
+        "questions":[
+            {
+                "question": "What is investing?",
+                "answer": "Putting (money) into financial schemes, shares, property, or a commercial venture with the expectation of achieving a profit"
+            },
+            {
+                "question": "Is Crypto a 'traditional' investment?",
+                "answer": "No"
+            },
+            {
+                "question": "Does Limited Liability only consider your capital invested into a firm when it goes bankrupt",
+                "answer": "Yes"
+            },
+            {
+                "question": "How much should you be investing",
+                "answer": "An amount you are able to lose, which will not impact your financial situation."
+            },
+            {
+                "question": "Why are investing goals important?",
+                "answer": "So that you enjoy the process, and are motivated to learn something new."
+            }
+        ]
+    },
+    {
+        "name": "Stocks",
+        "slides":[
+            {
+                "title": "Introduction to Stocks",
+                "body":[
+                    ""
+                ],
+                "image_source": "Stonks.jpg"
+            },
+            {
+                "title": "Types of Stock Trading",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Fundamental Stock Analysis",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Technical Stock Analysis",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Stock Orders",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Portfolio Management",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Staying Informed",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Strategies",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Summary and Resources",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Bonds",
+        "slides": [
+            {
+                "title": "Introduction to Bonds",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Terminology",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Types of Bonds",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Buying/Selling Bonds",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Secondary Market",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Coupon Payments",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Risks and Rewards",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Building a portfolio",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Strategies",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Risks and Rewards",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Resources",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Summary",
+                "body":[
+                    ""
+                ],
+                "image_source": null
             }
         ],
         "questions": [
             {
-                "question": "What is investing?",
-                "answer": "Investing refers to putting money in various schemes/mechanisms with the aim of making a profit"
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "ETFs",
+        "slides": [
+            {
+                "title": "Introduction to ETFs",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "How they work",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Investing in ETFs",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Risks and Rewards",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Diversification",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Tracking Investments",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Mutual Funds",
+        "slides":[
+            {
+                "title": "Introduction to Mutual Funds",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "How they work",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Concepts",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Selecting the right mutual fund",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Research and Analysis",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Investing",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Maintaining and Managing Investments",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Risks and Rewards",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Ethics and Responsible Investing",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Index Funds",
+        "slides":[
+            {
+                "title": "Introduction to Index Funds",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Popular Indexes/benchmarks",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "How they work",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Investing in Indexes",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Risks and Rewards",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Diversification",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Tracking Investments",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Final Tips",
+        "slides":[
+            {
+                "title":"Strategies",
+                "body":[
+                    "-Diversification: DO invest in a mix of high risk and low risk investments to hedge your predictions"
+                ],
+                "image_source": null
+            },
+            {
+                "title":"Staying Informed",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
             }
         ]
     }
+
 ]
