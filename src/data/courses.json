@@ -77,7 +77,8 @@
                     "When it comes to investing, we may need to gloss over some small terms which have a major meaning that you may not have known.",
                     "This includes terms (aside from the investment method names) such as:",
                     "Limited Liability - If a firm goes bankrupt (has no money), you will only lose what you invested and not your own assets like your house",
-                    "Portfolio - A collection of your investments which show your current prices and other relevant data"
+                    "Portfolio - A collection of your investments which show your current prices and other relevant data",
+                    "Capital - The money you invest"
                 ],
                 "image_source": null
             },
@@ -87,7 +88,8 @@
                     "Note: While this website IS financial advice, it is also true that if you do choose to invest",
                     "because of this course, then be warned that investing is at your own risk, so don't invest more than you can afford to lose",
                     "However, this is not to discourage you to invest, it is encouraged, because when there is a negative, there is also a positive.",
-                    "In this case, the positive is that there is a financial reward if you do invest properly using our advice, which can be high in certain cases."
+                    "In this case, the positive is that there is a financial reward if you do invest properly using our advice, which can be high in certain cases.",
+                    "Also note. Most of these methods are subject to market risk, as well as others which we delve into"
                 ],
                 "image_source": null
             },
@@ -192,7 +194,8 @@
                     "This includes methods such as Diversifying your portfolio into different sectors eg Software, Consumer Discretionary, etc,",
                     "as well as rebalancing your portfolio.",
                     "It also refers to avoiding mistakes such as not trading to a plan, emotional trading, and not cutting your losses quickly.",
-                    "Another thing to remember is not to fall for scams, which generally happen through dodgy links (be sure you connect to HTTPS before paying for anything)."
+                    "Another thing to remember is not to fall for scams, which generally happen through dodgy links (be sure you connect to HTTPS before paying for anything).",
+                    "Also: Only use trusted brokers to trade E.g. EToro, Trading212, Revolut, etc"
                 ],
                 "image_source": null
             },
@@ -236,108 +239,105 @@
             {
                 "title": "Introduction to Bonds",
                 "body":[
-                    ""
+                    "Welcome to Bonds! You must be wondering what they are?",
+                    "(Not 007, unfortunately this bond has no license to kill)",
+                    "Bonds by definition are long term loans which you lend to a certain organisation (commonly governments)",
+                    "where you may get a good return as you are repaid with interest, if all goes well."
                 ],
                 "image_source": null
             },
             {
-                "title": "Terminology",
+                "title": "Key Terminology",
                 "body":[
-                    ""
+                    "Face Value - What is promised to be paid by the bond issuer once the bond matures",
+                    "Coupon Rate -The nominal yield the bond is said to pay on issue date",
+                    "Maturity Date - When the bond is paid off",
+                    "Yield - The return an investor expects to receive each year over time until it matures"
                 ],
                 "image_source": null
             },
             {
                 "title": "Types of Bonds",
                 "body":[
-                    ""
+                    "Government Bonds - Bonds you make with governments so they can have more ways of receiving funding",
+                    "Corporate Bonds - Bonds you make with firms",
+                    "Municipal Bonds - Bonds made with cities, governments, etc"
                 ],
                 "image_source": null
             },
             {
-                "title": "Buying/Selling Bonds",
+                "title": "Buying Bonds",
                 "body":[
-                    ""
+                    "Bonds are generally issued by Governments, corporations and municipalities issue bonds when they need capital, on a Primary Market",
+                    "By buying these, you effectively become the investor to these organisations, as you are literally lending money to them."
                 ],
                 "image_source": null
             },
             {
                 "title": "Secondary Market",
                 "body":[
-                    ""
+                    "As mentioned in the previous slide, the bonds are issued on the Primary market.",
+                    "However, there is also a secondary market, where you can buy or sell bonds to/from other people.",
+                    "This is one way to make money (selling your bond at a marked up price on the secondary market) if you do not wish to get paid by interest repayments."
                 ],
                 "image_source": null
             },
             {
                 "title": "Coupon Payments",
                 "body":[
-                    ""
+                    "Coupon payments refer to the annual interest paid on a bond.",
+                    "This is paid to the investor annually by the issuer from the date of issue until the bond has matured"
                 ],
                 "image_source": null
             },
             {
                 "title": "Risks and Rewards",
                 "body":[
-                    ""
+                    "The main risks that present themselves with bonds is not only about defaulting payments,", 
+                    "but also any other economically natural risk such as inflation, and currency risks",
+                    "",
+                    "However, rewards also exist in the case of bonds,", 
+                    "namely that in the (most likely) case that it gets paid back or you sell it on the secondary market."
                 ],
                 "image_source": null
             },
             {
                 "title": "Building a portfolio",
                 "body":[
-                    ""
-                ],
-                "image_source": null
-            },
-            {
-                "title": "Strategies",
-                "body":[
-                    ""
-                ],
-                "image_source": null
-            },
-            {
-                "title": "Risks and Rewards",
-                "body":[
-                    ""
+                    "In the case of building a Bonds portfolio, the safest way of doing so is to diversify your bonds.",
+                    "This is so that you spread your capital across different risks and thus minimise it."
                 ],
                 "image_source": null
             },
             {
                 "title": "Resources",
                 "body":[
-                    ""
-                ],
-                "image_source": null
-            },
-            {
-                "title": "Summary",
-                "body":[
-                    ""
+                    "In this case, your primary resources would be utilising calculators for yield and interest rate calculations,",
+                    "as well as online resources for market research."
                 ],
                 "image_source": null
             }
         ],
         "questions": [
             {
-                "question": "",
-                "answer": ""
+                "question": "Where do Bonds get issued?",
+                "answer": "The Primary market"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "Where do Bonds get bought/sold?",
+                "answer": "The Secondary Market"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What are Bonds?",
+                "answer": "A loan to a Government, corporation, or a municipality that is paid back with interest"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "Diversifying your bonds is a bad idea?",
+                "answer": "No"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "Coupon Payments is the annual repaid interest paid from the date of issue until bond maturity",
+                "answer": "Yes"
             }
         ]
     },
@@ -582,22 +582,14 @@
             {
                 "title":"Strategies",
                 "body":[
-                    "-Diversification: DO invest in a mix of high risk and low risk investments to hedge your predictions"
-                ],
-                "image_source": null
-            },
-            {
-                "title":"Staying Informed",
-                "body":[
-                    ""
-                ],
-                "image_source": null
+                    "Enjoy the process! Here are some (new) revision Questions!"
+                ]
             }
         ],
         "questions":[
             {
-                "question": "",
-                "answer": ""
+                "question": "When looking at stocks fundamentally, do we look at their final accounts?",
+                "answer": "Yes"
             },
             {
                 "question": "",
