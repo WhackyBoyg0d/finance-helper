@@ -1,9 +1,9 @@
 // src/components/SignUp.tsx
 import React, { useState } from 'react';
-import { auth, database } from "../firebase";
+import { auth, database } from "../../firebase";
 import { ref, set } from 'firebase/database';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { User } from '../user'; 
+import { User } from '../common/user'; 
 import { useNavigate } from 'react-router-dom';
 import finwise from '../assets/finwise.png';
 // import { FaGoogle } from "react-icons/fa";

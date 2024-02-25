@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { onAuthStateChanged, Auth, User } from 'firebase/auth';
-import { auth, database} from '../firebase'; // Import the necessary Firebase modules
+import { auth, database} from '../../firebase'; // Import the necessary Firebase modules
 import finwise from '../assets/finwise.png';
 import pfp from '../assets/pfp.png';
 import { get, ref } from 'firebase/database';

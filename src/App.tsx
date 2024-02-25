@@ -2,13 +2,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
-import Home from './components/Home';
-import Profile from './components/Profile';
-import Login from "./components/Login";
+import Profile from './components/profile/Profile';
+import Login from "./components/login/Login";
 import CourseSelector from './components/courses/CourseSelector';
-import Landing from './components/Landing';
+import Landing from './components/landing/Landing';
 import Onboarding from './components/onboarding/Onboarding';
-import SignUp from './components/SignUp';
+import SignUp from './components/signup/SignUp';
 
 
 function App(): JSX.Element {

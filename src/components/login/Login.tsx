@@ -4,11 +4,11 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import finwise from '../assets/finwise.png';
 import { FaGoogle } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { auth, database } from "../firebase";
+import { auth, database } from "../../firebase";
 import { FaFacebook } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa";
 import { get, ref } from 'firebase/database';
-import { User } from '../user'; 
+import { User } from '../common/user'; 
 
 export function Login(): JSX.Element {
   const [username, setUsername] = useState("");

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { auth, database } from '../firebase';
+import { auth, database } from '../../firebase';
 import { ref, get } from 'firebase/database';
-import Navbar from './Navbar';
+import Navbar from '../common/Navbar';
 import { useCountUp } from 'use-count-up';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { User } from '../user';
+import { User } from '../common/user';
 import pfp from '../assets/pfp.png';
-import Index from "./courses";
+import Index from "../courses";
 
 const Profile: React.FC = () => {
   const [userData, setUserData] = useState<User | null>(null);
