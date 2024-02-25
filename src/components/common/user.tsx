@@ -1,13 +1,13 @@
 export class User {
     username: string;
     email: string;
-    dateLastCompletedCourse: number;
+    dateFirstStreakTime: number;
     courseCompletions: Array<CourseUserRefrence>;
 
     constructor(username: string, email: string) {
         this.username = username;
         this.email = email;
-        this.dateLastCompletedCourse = Date.now();
+        this.dateFirstStreakTime = Date.now();
         this.courseCompletions = [] as Array<CourseUserRefrence>;
     }
 }

@@ -18,6 +18,8 @@ const Profile: React.FC = () => {
 
 	const authUser: AuthUser | null = auth.currentUser;
   const courses: Array<Course> = coursesJson;
+
+  let [streak, setStreak] = useState(0);
   
   let [percentageComplete, setPercentageComplete] = useState(0.0);
 
@@ -35,6 +37,8 @@ const Profile: React.FC = () => {
 			const userDataSnapshot = await get(userRef);
 	
 			const user: User = userDataSnapshot.val();
+
+			setStreak(Math.floor((Date.now() - user.dateFirstStreakTime) / 86400000));
 
       let totalCourseQs = 0;
 			for(const course of courses) {
@@ -89,13 +93,13 @@ const Profile: React.FC = () => {
 								</span>
 							</p>
 						</div>
-						{(userData?.courseCompletions?.length ?? 0) > 0 ? (
+						{(streak != 0)? (
 							<div className="border-2 bg-slate-50 rounded-md border-black p-4 flex items-center justify-center flex-col">
 								<FaFire color="DarkRed" className="mb-4" size={150} />
 								<p>
 									Daily Streaks:{" "}
 									<span className="text-emerald-600 font-bold">
-										{userData?.courseCompletions?.length}
+										{streak}
 									</span>
 								</p>
 							</div>

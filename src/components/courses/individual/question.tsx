@@ -184,7 +184,12 @@ async function updateCourseWithPoint(authUser: AuthUser | null, course: Course, 
 						if(questionCorrect == course.questions[index].question) exists = true;
 					}
 					if(!exists) {
-						user.dateLastCompletedCourse = Date.now();
+						const date = new Date();
+						date.setMilliseconds(user.dateFirstStreakTime);
+						date.setTime(date.getTime() - (24*60*60*1000));
+
+						if(user.dateFirstStreakTime > date.getMilliseconds()) user.dateFirstStreakTime = Date.now();
+
 						completedCourse.questionsCorrect.push(course.questions[index].question);
 					}
 				}
