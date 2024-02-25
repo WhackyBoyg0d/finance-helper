@@ -161,35 +161,35 @@
             {
                 "title": "Stock Orders",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Portfolio Management",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Staying Informed",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Strategies",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Summary and Resources",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             }
@@ -223,91 +223,84 @@
             {
                 "title": "Introduction to Bonds",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Terminology",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Types of Bonds",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Buying/Selling Bonds",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Secondary Market",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Coupon Payments",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Risks and Rewards",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
                 "title": "Building a portfolio",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Strategies",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Risks and Rewards",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Resources",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Summary",
                 "body":[
-                    {}
-                ],
-                "image_source": null
-            },
-            {
-                "title": "",
-                "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             }
@@ -339,44 +332,44 @@
         "name": "ETFs",
         "slides": [
             {
-                "title": "",
+                "title": "Introduction to ETFs",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "How they work",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Investing in ETFs",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Risks and Rewards",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Diversification",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Tracking Investments",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             }
@@ -408,65 +401,65 @@
         "name": "Mutual Funds",
         "slides":[
             {
-                "title": "",
+                "title": "Introduction to Mutual Funds",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "How they work",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Concepts",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Selecting the right mutual fund",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Research and Analysis",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Investing",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Maintaining and Managing Investments",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Risks and Rewards",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Ethics and Responsible Investing",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             }
@@ -498,51 +491,51 @@
         "name": "Index Funds",
         "slides":[
             {
-                "title": "",
+                "title": "Introduction to Index Funds",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Popular Indexes/benchmarks",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "How they work",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Investing in Indexes",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Risks and Rewards",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Diversification",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             },
             {
-                "title": "",
+                "title": "Tracking Investments",
                 "body":[
-                    {}
+                    ""
                 ],
                 "image_source": null
             }
@@ -573,7 +566,20 @@
     {
         "name": "Final Tips",
         "slides":[
-            {}
+            {
+                "title":"Strategies",
+                "body":[
+                    "-Diversification: DO invest in a mix of high risk and low risk investments to hedge your predictions"
+                ],
+                "image_source": null
+            },
+            {
+                "title":"Staying Informed",
+                "body":[
+                    ""
+                ],
+                "image_source": null
+            }
         ],
         "questions":[
             {
