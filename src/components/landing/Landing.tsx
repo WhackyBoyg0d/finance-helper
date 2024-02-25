@@ -1,4 +1,4 @@
-import finwise from '../assets/finwise.png';
+import finwise from 'assets/finwise.png';
 import Header from '../common/Header';
 import Footer from '../common/Footer';
 import React from 'react';

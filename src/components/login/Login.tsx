@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import finwise from '../assets/finwise.png';
+import finwise from 'assets/finwise.png';
 import { FaGoogle } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { auth, database } from "../../firebase";

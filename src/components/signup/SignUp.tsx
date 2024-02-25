@@ -5,7 +5,7 @@ import { ref, set } from 'firebase/database';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { User } from '../common/user'; 
 import { useNavigate } from 'react-router-dom';
-import finwise from '../assets/finwise.png';
+import finwise from 'assets/finwise.png';
 // import { FaGoogle } from "react-icons/fa";
 // import {FaTwitter} from "react-icons/fa";
 // import {FaFacebook} from "react-icons/fa";
