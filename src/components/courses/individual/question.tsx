@@ -7,6 +7,7 @@ import { Bounce, toast, ToastContainer } from "react-toastify";
 
 import { auth, database } from "../../../firebase";
 import { ref, set, get } from 'firebase/database';
+import { User as AuthUser } from 'firebase/auth';
 
 import { User } from "components/common/user";
 
@@ -14,6 +15,9 @@ const ANSWER_COUNT = 5;
 
 export function Question(props: { course: Course, finishHandler: () => void }): JSX.Element {
 	const navigate = useNavigate();
+
+	const authUser = auth.currentUser;
+
 	const [index, setIndex] = useState(0);
 	const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
@@ -21,11 +25,29 @@ export function Question(props: { course: Course, finishHandler: () => void }): 
 
 
 	let [answer, setAnswer] = useState("");
-	let [question, setQuestion] = useState(
-		props.course.questions[index].question
-	);
+	let [question, setQuestion] = useState("Placeholder question");
 
 	useEffect(() => {
+		if(authUser) (async () => {
+			const userRef = ref(database, `users/${authUser.uid}`);
+			const userDataSnapshot = await get(userRef);
+	
+			const user: User = userDataSnapshot.val();
+
+			for(const completedCourse of user.courseCompletions) {
+				if(completedCourse.name == props.course.name) {
+					if(completedCourse.questionsCorrect.length >= props.course.questions.length) navigate("../")
+					setIndex(completedCourse.questionsCorrect.length);
+				}
+			}
+		})();
+		else {
+			navigate("/profile")
+		}
+	}, [])
+
+	useEffect(() => {
+		console.log("question to be: " + props.course.questions[index].question)
 		setQuestion(props.course.questions[index].question);
 
 		const allPossibleAnswers = props.course.questions.map(
@@ -80,7 +102,7 @@ export function Question(props: { course: Course, finishHandler: () => void }): 
 						<button
 							onClick={() => {
 								if (answer === props.course.questions[index].answer) {
-									addUserPoint();
+									updateCourseWithPoint(authUser, props.course, index);
 									setisOptionSelected(false);
 									setSelectedAnswer(null);
 								}
@@ -95,7 +117,6 @@ export function Question(props: { course: Course, finishHandler: () => void }): 
 									setIndex(index + 1);
 								else {
 									addCompletedCourse(props.course);
-									// navigate("/courses");
 									props.finishHandler();
 								}
 							}}
@@ -143,34 +164,38 @@ function shuffleArr(array: Array<any>) {
 	}
 }
 
-async function addUserPoint() {
-	const authUser = auth.currentUser;
+async function updateCourseWithPoint(authUser: AuthUser | null, course: Course, index: number) {
 	if(!authUser) console.error("User not logged in");
 	else {
 		const userRef = ref(database, `users/${authUser.uid}`);
 		const userDataSnapshot = await get(userRef);
 
 		const user: User = userDataSnapshot.val();
-		user.points += 1
-
-		set(userRef, user);
-	}
-}
-
-async function addCompletedCourse(course: Course) {
-	const authUser = auth.currentUser;
-	if(!authUser) console.error("User not logged in");
-	else {
-		const userRef = ref(database, `users/${authUser.uid}`);
-		const userDataSnapshot = await get(userRef);
-
-		const user: User = userDataSnapshot.val();
-		user.dateLastCompletedCourse = Date.now();
-		if(user.coursesCompleted) {
-			user.coursesCompleted.push(course);
+		if(user.courseCompletions) {
+			let courseExists = false;
+			for(const completedCourse of user.courseCompletions) {
+				if(completedCourse.name == course.name) {
+					courseExists = true;
+					let exists: boolean = false;
+					for(const questionCorrect of completedCourse.questionsCorrect) {
+						if(questionCorrect == course.questions[index].question) exists = true;
+					}
+					if(!exists) {
+						user.dateLastCompletedCourse = Date.now();
+						completedCourse.questionsCorrect.push(course.questions[index].question);
+					}
+				}
+			}
+			if(!courseExists) user.courseCompletions.push({
+				name: course.name,
+				questionsCorrect: [course.questions[index].question]
+			});
 		}
 		else {
-			user.coursesCompleted = [course];
+			user.courseCompletions = [{
+				name: course.name,
+				questionsCorrect: [course.questions[index].question]
+			}]
 		}
 
 		set(userRef, user);

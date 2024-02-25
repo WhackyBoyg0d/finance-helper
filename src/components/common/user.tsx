@@ -1,17 +1,20 @@
 export class User {
     username: string;
     email: string;
-    points: number;
     dateLastCompletedCourse: number;
-    coursesCompleted: Array<Course>;
+    courseCompletions: Array<CourseUserRefrence>;
 
     constructor(username: string, email: string) {
         this.username = username;
         this.email = email;
-        this.points = 0;
         this.dateLastCompletedCourse = Date.now();
-        this.coursesCompleted = [] as Array<Course>;
+        this.courseCompletions = [] as Array<CourseUserRefrence>;
     }
+}
+
+export interface CourseUserRefrence {
+    name: string;
+    questionsCorrect: Array<string>;
 }
 
 export default User;

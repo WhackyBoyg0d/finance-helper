@@ -65,13 +65,13 @@ const Profile: React.FC = () => {
 								</span>
 							</p>
 						</div>
-						{(userData?.points ?? 0) > 0 ? (
+						{(userData?.courseCompletions?.length ?? 0) > 0 ? (
 							<div className="border-2 bg-slate-50 rounded-md border-black p-4 flex items-center justify-center flex-col">
 								<FaFire color="DarkRed" className="mb-4" size={150} />
 								<p>
 									Daily Streaks:{" "}
 									<span className="text-emerald-600 font-bold">
-										{userData?.points}
+										{userData?.courseCompletions?.length}
 									</span>
 								</p>
 							</div>
