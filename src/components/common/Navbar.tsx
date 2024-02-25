@@ -43,22 +43,16 @@ const Navbar: React.FC = () => {
 				</Link>
 				<div className="flex items-center">
 					<button
-						onClick={() => navigate("/courses")}
-						className="text-xl font-bold mx-2 hover:text-blue-500"
-					>
-						Courses
-					</button>
-					<button
 						onClick={() => navigate("/budget")}
 						className="text-xl font-bold mx-2 hover:text-blue-500"
 					>
 						Budget
 					</button>
 					<button
-						onClick={() => navigate("/onboarding")}
+						onClick={() => navigate("/profile")}
 						className="text-xl font-bold mx-2 hover:text-blue-500"
 					>
-						Onboarding
+						Profile
 					</button>
 					{user ? (
 						<>

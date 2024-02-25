@@ -13,7 +13,7 @@ import { User } from "components/common/user";
 
 const ANSWER_COUNT = 5;
 
-export function Question(props: { course: Course }): JSX.Element {
+export function Question(props: { course: Course, finishHandler: () => void }): JSX.Element {
 	const navigate = useNavigate();
 
 	const authUser = auth.currentUser;
@@ -22,6 +22,7 @@ export function Question(props: { course: Course }): JSX.Element {
 	const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
 	const [isOptionSelected, setisOptionSelected] = useState(false);
+
 
 	let [answer, setAnswer] = useState("");
 	let [question, setQuestion] = useState("Placeholder question");
@@ -41,7 +42,7 @@ export function Question(props: { course: Course }): JSX.Element {
 			}
 		})();
 		else {
-			navigate("/")
+			navigate("/profile")
 		}
 	}, [])
 
@@ -115,7 +116,7 @@ export function Question(props: { course: Course }): JSX.Element {
 								if (index < props.course.questions.length - 1)
 									setIndex(index + 1);
 								else {
-									navigate("/courses");
+									props.finishHandler();
 								}
 							}}
 							disabled={!isOptionSelected}

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Question from "./question";
 import Slide from "./slide";
 
 import coursesJson from "data/courses.json";
 import Navbar from "../../common/Navbar";
+import moment from "moment";
 
 export function IndividualCourse(): JSX.Element {
+
+
 	const courseName = useParams<string>().id;
 	const course: Course = (() => {
 		const courses: Array<Course> = coursesJson;
@@ -30,6 +33,41 @@ export function IndividualCourse(): JSX.Element {
 
 function SlideWithControls(props: { course: Course }): JSX.Element {
 	const [index, setIndex] = useState(0);
+
+	const course = props.course;
+
+
+	const currentTime = new Date();
+	const startDate = moment(currentTime);
+
+	
+	// save in react state	
+	const [startTime, setStartTime] = useState(startDate);
+
+	const navigate = useNavigate();
+
+	
+	function calculateTime(finishedTime: Date) {
+
+		const timeEnd = moment(finishedTime);
+		const diff = timeEnd.diff(startDate);
+		const diffDuration = moment.duration(diff);
+		
+		return diffDuration.asSeconds(); 
+	}
+
+	function finishCourse() {
+		const finishedTime = new Date();
+		const duration = calculateTime(finishedTime);
+		alert(duration);
+
+		// navigate to finish page while passing in the duration & course name
+		navigate(`/courses/${course.name}/finish?dur=${duration}&course=${course.name}`);
+
+
+
+
+	}
 
 	return (
 		<div>
@@ -63,7 +101,7 @@ function SlideWithControls(props: { course: Course }): JSX.Element {
 				</p>
 			</div>
 
-			<Slide course={props.course} index={index}></Slide>
+			<Slide course={props.course} index={index} finishHandler={finishCourse}></Slide>
 		</div>
 	);
 }
