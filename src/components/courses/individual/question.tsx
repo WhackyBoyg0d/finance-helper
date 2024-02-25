@@ -12,12 +12,13 @@ import { User } from "components/common/user";
 
 const ANSWER_COUNT = 5;
 
-export function Question(props: { course: Course }): JSX.Element {
+export function Question(props: { course: Course, finishHandler: () => void }): JSX.Element {
 	const navigate = useNavigate();
 	const [index, setIndex] = useState(0);
 	const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
 	const [isOptionSelected, setisOptionSelected] = useState(false);
+
 
 	let [answer, setAnswer] = useState("");
 	let [question, setQuestion] = useState(
@@ -94,7 +95,8 @@ export function Question(props: { course: Course }): JSX.Element {
 									setIndex(index + 1);
 								else {
 									addCompletedCourse(props.course);
-									navigate("/courses");
+									// navigate("/courses");
+									props.finishHandler();
 								}
 							}}
 							disabled={!isOptionSelected}

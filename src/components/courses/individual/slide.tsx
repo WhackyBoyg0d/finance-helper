@@ -1,8 +1,9 @@
 import React from "react";
 import Question from "./question";
 
-export function Slide(props: { course: Course; index: number }): JSX.Element {
+export function Slide(props: { course: Course; index: number, finishHandler: () => void}): JSX.Element {
 	const slide = props.course.slides[props.index];
+
 
 	return (
 		<>
@@ -14,7 +15,7 @@ export function Slide(props: { course: Course; index: number }): JSX.Element {
 							return <p key={"paragraph" + index}>{paragraph}</p>;
 						})}
 					</div>
-					<Question course={props.course}></Question>
+					<Question course={props.course} finishHandler={props.finishHandler}></Question>
 				</div>
 				<div className="flex align-middle items-center justify-center">
 					<OptionalImage src={slide.image_source}></OptionalImage>
