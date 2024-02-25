@@ -41,7 +41,7 @@ const Profile: React.FC = () => {
 		<>
 			<Navbar />
 
-			<div className="justify-items-start pl-24 my-6 grid grid-cols-2 gap-8">
+			<div className=" pl-24 my-6 grid grid-cols-2 gap-8">
 				<div className="justify-center">
 					<h2 className="border-b-2 border-r-2 border-black inline-flex mb-4 pr-2">
 						Your Courses
@@ -49,8 +49,8 @@ const Profile: React.FC = () => {
 					<Index />
 				</div>
 
-				<div className="flex-end flex justify-end">
-					<div className="mx-16 my-6 gap-8 grid grid-rows-2 w-1/2">
+				<div className="flex-end flex justify-center ">
+					<div className="mx-16 my-6 gap-8 grid grid-rows-2 ">
 						<div className="border-2 bg-slate-50 rounded-md border-black p-4 flex items-center justify-center flex-col">
 							{/*goal*/}
 							<CircularProgressbar
