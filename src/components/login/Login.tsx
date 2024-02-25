@@ -14,7 +14,7 @@ export function Login(): JSX.Element {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  let errorMessage = "";
   const handleLogin = async () => {
     try {
     const userCredential = await signInWithEmailAndPassword(auth, username, password);
@@ -27,6 +27,7 @@ export function Login(): JSX.Element {
     if (userData) {
       console.log('User Data:', userData);
     } else {
+      
       console.log('User Data not found.');
     }
 
@@ -34,6 +35,7 @@ export function Login(): JSX.Element {
       navigate('/Profile');
 
     } catch (error) {
+      alert("Email or Password is invalid");
       console.error('Error logging in:');
     }
   };
@@ -69,11 +71,13 @@ export function Login(): JSX.Element {
         >
           Login
         </button>
+        <p>{errorMessage}</p>
         <p className="text-gray-600">
           Don't have an account?{" "}
           <a href="/signup" className="text-blue-500">
             Sign up
           </a>
+          
         </p>
       </div>
     </div>
