@@ -1,13 +1,9 @@
-import finwise from '../assets/finwise.png';
-import {useNavigate} from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
+import finwise from 'assets/finwise.png';
+import Header from '../common/Header';
+import Footer from '../common/Footer';
 import React from 'react';
 
-
-
 const LandingPage: React.FC = () => {
-    const navigate = useNavigate();
     return (
         <div className="min-h-screen bg-primary flex flex-col">
             <Header />
