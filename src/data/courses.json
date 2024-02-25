@@ -133,87 +133,100 @@
             {
                 "title": "Introduction to Stocks",
                 "body":[
-                    ""
+                    "What is a Stock?",
+                    "-A stock is buying shares in a Public Limited Company from a specific market designed for this exchange",
+                    "It allows you to not only receive a dividend, but also gives you some voting power, since it is 1 vote per share generally.",
+                    "-Its price is generally based off its demand level for a given supply in issued shares.",
+                    "E.g. When Boeing had difficulties with the 777MAX models, their stock price had significantly dropped.",
+                    "This is because this was a fault at the hands of Boeing, which means that bad publicity will result in less demand in Boeing"
                 ],
                 "image_source": "Stonks.jpg"
             },
             {
                 "title": "Types of Stock Trading",
                 "body":[
-                    ""
+                    "With stock trading, we must realise that there are multiple ways to trade stocks",
+                    "One such way is Day Trading. This is when you are trading quite quickly and buying/selling based on price differentials in a short period of time",
+                    "Another way is Long term holding, when you hold a stock for a much longer period of time and sell on a predicted maximised profit.",
+                    "Algorithmic Trading is an adaptable strategy that you can use by creating an algorithm (a complex process for newbies)",
+                    "in order to make a profit, where the computer trades for you. It is more used in short term trading due to the computer's quicker-than-humans trading speeds"
                 ],
                 "image_source": null
             },
             {
                 "title": "Fundamental Stock Analysis",
                 "body":[
-                    ""
+                    "Fundamental Stock Analysis is a method of analysing stocks in the longer range of things.",
+                    "It involves:",
+                    "-Analysing a company's methods of making money",
+                    "-Ensuring that over a certain holding period, that stock will increase in value",
+                    "Reviewing the accounts they publish to ensure their finances seem set (ie it's a safe investment if you look at ratios such as gearing)"
                 ],
                 "image_source": null
             },
             {
                 "title": "Technical Stock Analysis",
                 "body":[
-                    ""
+                    "Technical Stock analysis primarily involves the use of Stock Movement Indicators (such as MACD, RSI, OBV)",
+                    "in order to make a guess as to how a stock would move based on how a stock has been moving over a certain time period.",
+                    "It can be used in both short term and long term (depending on the set timeframe), and generally graph the results to get a clearer picture, like the picture in this slide"
                 ],
                 "image_source": null
             },
             {
                 "title": "Stock Orders",
                 "body":[
-                    ""
+                    "When we want to buy or sell stocks, we must place an 'order'.",
+                    "This order is effectively an instruction that once we reach a certain price on the order book (shown below), we do an action we want",
+                    "There are multiple ways to implement these actions, which is either a limit order, or a market order generally",
+                    "Limit orders are orders that are only executed until the best price has reached a certain price on the order book", 
+                    "these orders do not necessarily terminate unless you use a specific order called a 'fill and kill' order, which clears your orders for later.",
+                    "A Market order is an order like a limit order, however, it will not stop and instead will 'fill out' the order regardless of price"
                 ],
                 "image_source": null
             },
             {
                 "title": "Portfolio Management",
                 "body":[
-                    ""
+                    "Managing a stock portfolio generally refers to maintaining track of how your investments are doing.",
+                    "This includes methods such as Diversifying your portfolio into different sectors eg Software, Consumer Discretionary, etc,",
+                    "as well as rebalancing your portfolio.",
+                    "It also refers to avoiding mistakes such as not trading to a plan, emotional trading, and not cutting your losses quickly.",
+                    "Another thing to remember is not to fall for scams, which generally happen through dodgy links (be sure you connect to HTTPS before paying for anything)."
                 ],
                 "image_source": null
             },
             {
                 "title": "Staying Informed",
                 "body":[
-                    ""
-                ],
-                "image_source": null
-            },
-            {
-                "title": "Strategies",
-                "body":[
-                    ""
-                ],
-                "image_source": null
-            },
-            {
-                "title": "Summary and Resources",
-                "body":[
-                    ""
+                    "Staying informed is one thing that is the most important thing with trading stocks,", 
+                    "as you are able to make pre-empted decisions on stock orders (like to buy or to sell a stock).",
+                    "One of the best ways to stay informed is primarily through watching the news to see what is happening around different sectors",
+                    "I recommend you follow Bloomberg/The Economist (as below) for this, as they are quite business-focused generally"
                 ],
                 "image_source": null
             }
         ],
         "questions":[
             {
-                "question": "",
-                "answer": ""
+                "question": "What is a Stock?",
+                "answer": "A fragment of a company that you own when bought"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What should you do when using Stock movement indicators?",
+                "answer": "Create a graph of your dataframe/dataset"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What does a 'fill and kill' order do?",
+                "answer": "Buy as much of the stock you can at the best price, and terminating the order for the remainder you could not buy."
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What is something you should do before trading?",
+                "answer": "Do up a plan"
             },
             {
-                "question": "",
-                "answer": ""
+                "question": "What do Bloomberg/The Economist focus on?",
+                "answer": "Business-related news per sector"
             }
         ]
     },
