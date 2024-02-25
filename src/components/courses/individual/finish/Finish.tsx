@@ -1,8 +1,9 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../../common/Navbar"
 
 function FinishScreen(): JSX.Element {
+    const navigate = useNavigate();
     const location = useLocation();
 
     // Parse query parameters
@@ -34,6 +35,7 @@ function FinishScreen(): JSX.Element {
             <h1 className="font-bold">You rock! </h1>
             <h1>You finished course: "{courseName}" in just : <span className="font-3xl text-emerald-500 font-extrabold">{time}</span> </h1>
         </div>
+        <button onClick={() => navigate("/profile")}>Return Home</button>
       </div>
     );
 }

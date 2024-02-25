@@ -59,14 +59,9 @@ function SlideWithControls(props: { course: Course }): JSX.Element {
 	function finishCourse() {
 		const finishedTime = new Date();
 		const duration = calculateTime(finishedTime);
-		alert(duration);
 
 		// navigate to finish page while passing in the duration & course name
 		navigate(`/courses/${course.name}/finish?dur=${duration}&course=${course.name}`);
-
-
-
-
 	}
 
 	return (
