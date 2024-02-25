@@ -38,7 +38,6 @@ export function Index(): JSX.Element {
 				</h1>
 				<ul className="flex flex-col gap-4">
 					{courses.map((course) => {
-						console.log(course);
 						return (
 							<li className="flex flex-row items-center ">
 								{(
@@ -85,6 +84,9 @@ export function Index(): JSX.Element {
 }
 
 function existsInArray(array: Array<CourseUserRefrence>, value: string): boolean {
+	if(array == undefined) return false;
+	if(array.length > 0) return false;
+	
 	for(const item of array) {
 		if(item.name == value) return true
 	}
@@ -93,6 +95,9 @@ function existsInArray(array: Array<CourseUserRefrence>, value: string): boolean
 }
 
 function findUserCourseRefrenceWithName(array: Array<CourseUserRefrence>, name: string): CourseUserRefrence  {
+	if(array == undefined) return {} as CourseUserRefrence;
+	if(array.length > 0) return {} as CourseUserRefrence;
+
 	for(const item of array) {
 		if(item.name == name) return item
 	}
