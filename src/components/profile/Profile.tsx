@@ -9,33 +9,57 @@ import { User } from "../common/user";
 import pfp from "../assets/pfp.png";
 import Index from "../courses";
 import { FaFire } from "react-icons/fa";
+import { User as AuthUser } from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
+import coursesJson from "data/courses.json";
 
 const Profile: React.FC = () => {
+  const navigate = useNavigate();
+
+	const authUser: AuthUser | null = auth.currentUser;
+  const courses: Array<Course> = coursesJson;
+  
+  let [percentageComplete, setPercentageComplete] = useState(0.0);
+
 	const [userData, setUserData] = useState<User | null>(null);
 	const { value: value1 } = useCountUp({
 		isCounting: true,
 		duration: 2.5,
 		start: 0,
-		end: 75,
+		end: percentageComplete,
 	});
 
 	useEffect(() => {
-		const fetchUserData = async () => {
-			try {
-				const user = auth.currentUser;
-				if (user) {
-					const userRef = ref(database, `users/${user.uid}`);
-					const userDataSnapshot = await get(userRef);
-					const fetchedUserData: User | null = userDataSnapshot.val();
-					setUserData(fetchedUserData);
-				}
-			} catch (error) {
-				console.error("Error fetching user data:", error);
-			}
-		};
+		if(authUser) (async () => {
+			const userRef = ref(database, `users/${authUser.uid}`);
+			const userDataSnapshot = await get(userRef);
+	
+			const user: User = userDataSnapshot.val();
 
-		fetchUserData();
-	}, []);
+      let totalCourseQs = 0;
+			for(const course of courses) {
+        for(const question of course.questions) {
+          totalCourseQs++;
+        }
+      }
+
+      if(user.courseCompletions) {
+        let totalUserQs = 0;
+        for(const course of user.courseCompletions) {
+          for(const question of course.questionsCorrect) {
+            totalUserQs++;
+          }
+        }
+
+        setPercentageComplete(Math.floor(totalUserQs/ totalCourseQs * 100));
+      } else {
+        setPercentageComplete(0);
+      }
+		})();
+		else {
+			navigate("/profile")
+		}
+	}, [])
 
 	return (
 		<>

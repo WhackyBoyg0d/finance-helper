@@ -34,11 +34,15 @@ export function Question(props: { course: Course, finishHandler: () => void }): 
 	
 			const user: User = userDataSnapshot.val();
 
-			for(const completedCourse of user.courseCompletions) {
-				if(completedCourse.name == props.course.name) {
-					if(completedCourse.questionsCorrect.length >= props.course.questions.length) navigate("../")
-					setIndex(completedCourse.questionsCorrect.length);
+			if(user.courseCompletions) {
+				for(const completedCourse of user.courseCompletions) {
+					if(completedCourse.name == props.course.name) {
+						if(completedCourse.questionsCorrect.length >= props.course.questions.length) navigate("../")
+						setIndex(completedCourse.questionsCorrect.length);
+					}
 				}
+			} else {
+				setIndex(0);
 			}
 		})();
 		else {
