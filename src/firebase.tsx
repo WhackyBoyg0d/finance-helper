@@ -1,8 +1,8 @@
-
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getDatabase } from 'firebase/database'; 
+
 const firebaseConfig = {
   apiKey: "AIzaSyDTk8byuONUFYUBD3JHwmAnfBrLmjakv6Y",
   authDomain: "financeapp-285fe.firebaseapp.com",

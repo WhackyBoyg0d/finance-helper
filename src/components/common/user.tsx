@@ -10,6 +10,8 @@ export class User {
         this.email = email;
         this.points = 0;
         this.dateLastCompletedCourse = new Date();
-        this.coursesCompleted = {} as Array<Course>;
+        this.coursesCompleted = [] as Array<Course>;
     }
 }
+
+export default User;

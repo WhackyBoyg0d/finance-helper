@@ -3,7 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 import "react-toastify/dist/ReactToastify.css";
 
-import { Bounce, toast, ToastContainer, ToastPosition } from "react-toastify";
+import { Bounce, toast, ToastContainer } from "react-toastify";
+
+import { auth, database } from "../../../firebase";
+import { ref, set, get } from 'firebase/database';
+
+import { User } from "components/common/user";
 
 const ANSWER_COUNT = 5;
 
@@ -74,7 +79,7 @@ export function Question(props: { course: Course }): JSX.Element {
 						<button
 							onClick={() => {
 								if (answer === props.course.questions[index].answer) {
-									alert("TODO increase points for right answer");
+									addUserPoint();
 									setisOptionSelected(false);
 									setSelectedAnswer(null);
 								}
@@ -130,6 +135,20 @@ function shuffleArr(array: Array<any>) {
 	for (var i = array.length - 1; i > 0; i--) {
 		var rand = Math.floor(Math.random() * (i + 1));
 		[array[i], array[rand]] = [array[rand], array[i]];
+	}
+}
+
+async function addUserPoint() {
+	const authUser = auth.currentUser;
+	if(!authUser) console.error("User not logged in");
+	else {
+		const userRef = ref(database, `users/${authUser.uid}`);
+		const userDataSnapshot = await get(userRef);
+
+		const user: User = userDataSnapshot.val();
+		user.points += 1;
+
+		set(userRef, user);
 	}
 }
 

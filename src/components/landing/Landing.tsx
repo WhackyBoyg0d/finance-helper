@@ -3,8 +3,6 @@ import Header from '../common/Header';
 import Footer from '../common/Footer';
 import React from 'react';
 
-
-
 const LandingPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-primary flex flex-col">
