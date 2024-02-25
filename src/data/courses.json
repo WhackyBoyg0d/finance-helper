@@ -6,9 +6,9 @@
                 "title": "Welcome to Finwise",
                 "body": [
                     "Hi, we would like to welcome you to Finwise",
-                    "We are a 5 member team",
-                    "We are a financial aid aimed to improve financial literacy in our users",
-                    "We promote education through reinforcement learning directly after reading"
+                  "We are a 5 member team",
+                  "We are a financial aid aimed to improve financial literacy in our users",
+                  "We promote education through reinforcement learning directly after reading"
                 ],
                 "image_source": "welcome.jpg"
             },
@@ -45,7 +45,7 @@
         ]
     },
     {
-        "name": "Investing",
+        "name": "Introduction to Investing",
         "slides": [
             {
                 "title": "Basics of investing",
@@ -68,42 +68,509 @@
                     "-In this course, you will primarily learn about Long term conventional investment methods such as Stocks and Bonds.", 
                     "However in some cases, there are also short term offshoots you will also learn such as Day Trading"
 
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            }
+
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Stocks",
+        "slides":[
+            {
+                "title": "Introduction to Stocks:",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Types of Stock Trading",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Fundamental Stock Analysis",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Technical Stock Analysis",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Stock Orders",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Portfolio Management",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Staying Informed",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Strategies",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "Summary and Resources",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Bonds",
+        "slides": [
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
                 ],
                 "image_source": null
             }
         ],
         "questions": [
             {
-                "question": "What is investing?",
-                "answer": "Investing refers to putting money in various schemes/mechanisms with the aim of making a profit"
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
             }
         ]
     },
     {
-        "name": "Investing:",
+        "name": "ETFs",
         "slides": [
             {
-                "title": "Basics of investing",
-                "body": [
-                    "What is investing?",
-                    "By definition, investing is defined as:", 
-                    "putting (money) into financial schemes, shares, property, or a commercial venture with the expectation of achieving a profit.",
-                    "To simplify, you're giving some of your money into certain ideas which works by buying and selling, in the hopes of making a profit by doing so"
-                ]
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
             },
             {
-                "title": "Different types of investing",
-                "body": [
-                    "-As we saw in the previous slides, we have different mechanisms to put money into which can turn a profit", 
-                    "But how do we differentiate between them?",
-                    "-That's done under 2 different ways; the time, and its general convention in how investors invest",
-                    "-Time-defined: Long term (e.g. Holding stocks long term) vs Short term (e.g. Day Trading)",
-                    "-Convention-defined: Traditional (e.g. Bonds) vs Alternate (e.g. Crypto)",
-                    "-In this course, you will primarily learn about Long term conventional investment methods such as Stocks and Bonds.", 
-                    "However in some cases, there are also short term offshoots you will also learn such as Day Trading"
-
-                ]
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Mutual Funds",
+        "slides":[
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Index Funds",
+        "slides":[
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            },
+            {
+                "title": "",
+                "body":[
+                    {}
+                ],
+                "image_source": null
+            }
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            }
+        ]
+    },
+    {
+        "name": "Final Tips",
+        "slides":[
+            {}
+        ],
+        "questions":[
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
+            },
+            {
+                "question": "",
+                "answer": ""
             }
         ]
     }
+
 ]
